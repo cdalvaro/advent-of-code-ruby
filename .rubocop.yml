@@ -1,0 +1,31 @@
+require:
+  - rubocop-minitest
+  - rubocop-rake
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.1
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 30
+
+Style/GlobalVars:
+  Enabled: false
+
+Style/ModuleFunction:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: true
+  EnforcedStyle: percent_r
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes
