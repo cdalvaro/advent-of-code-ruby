@@ -1,6 +1,6 @@
 # Advent of Code 2023
 
-<img src="https://s3.cdalvaro.io/github.com/cdalvaro/advent-of-code-2023/Ruby.png" alt="Ruby" height="360px" style="float: right; margin: 5px"/>
+<img src="https://s3.cdalvaro.io/github.com/cdalvaro/advent-of-code-2023/Ruby.png" alt="Ruby" height="360px" margin="5px" align="right"/>
 
 This repo contains my solutions to the [Advent of Code 2023](https://adventofcode.com/2023) challenges, written in the [Ruby](https://www.ruby-lang.org) programming language.
 
