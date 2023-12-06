@@ -1,0 +1,37 @@
+module AdventOfCode
+module Puzzles
+module Day01
+
+  class Part1
+
+    @calibration_values: [Integer]
+
+    @file_contents: [String]
+
+    def answer: () -> Integer
+
+    def calibration_values: () -> [Integer]
+
+    def file_contents: () -> [String]
+
+    def find_first_number: () -> Integer?
+
+    def find_last_number: () -> Integer?
+
+    def select_number: (String) -> Integer
+  end
+
+  class Part2
+
+    TRANSLATIONS: { String: Integer }
+
+    def find_first_number: (String) -> Integer
+
+    def find_last_number: (String) -> Integer
+
+    def translate_contents: () -> void
+
+  end
+end
+end
+end
