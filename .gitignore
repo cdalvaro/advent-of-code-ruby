@@ -78,6 +78,7 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 ### Ruby template
+Gemfile.lock
 *.gem
 *.rbc
 /.config
