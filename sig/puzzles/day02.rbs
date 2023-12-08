@@ -1,0 +1,39 @@
+module AdventOfCode
+  module Puzzles
+    module Day02
+
+      class Set
+
+        @blue: Integer
+        @green: Integer
+        @red: Integer
+        @power: Integer
+
+        def blue: () -> Integer
+
+        def green: () -> Integer
+
+        def red: () -> Integer
+
+        def power: () -> Integer
+      end
+
+      class Game
+
+        @id: Integer
+        @sets: [Set]
+
+        def id: () -> Integer
+
+        def sets: () -> [Set]
+
+        def valid?: (Integer, Integer, Integer) -> bool
+      end
+
+      class Part1
+
+      end
+
+    end
+  end
+end
