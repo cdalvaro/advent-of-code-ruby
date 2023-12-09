@@ -5,13 +5,12 @@ module AdventOfCode
       class Part1
 
         @calibration_values: [Integer]
-        @file_contents: [String]
+
+        attr_reader file_contents: [String]
 
         def answer: () -> Integer
 
         def calibration_values: () -> [Integer]
-
-        def file_contents: () -> [String]
 
         def find_first_number: () -> Integer?
 

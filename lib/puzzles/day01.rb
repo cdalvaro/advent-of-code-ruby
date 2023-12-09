@@ -8,17 +8,20 @@ module AdventOfCode
     module Day01
       ##
       # Class for solving Day 01 - Part 1 puzzle
-      #
-      # On each line, the calibration value can be found by combining
-      # the first digit and the last digit (in that order) to form a
-      # single two-digit number.
       class Part1
         attr_reader :file_contents
 
+        ##
+        # @param file [String] file with puzzle input
         def initialize(file:)
           @file_contents = File.readlines(file, chomp: true)
         end
 
+        ##
+        # Compute the answer for the puzzle.
+        # The answer is the sum of all calibration values.
+        #
+        # @return [Integer] answer for the puzzle
         def answer
           calibration_values.sum
         end
@@ -68,10 +71,6 @@ module AdventOfCode
 
       ##
       # Class for solving Day 01 - Part 2 puzzle
-      #
-      # It looks like some of the digits are actually spelled out with
-      # letters: one, two, three, four, five, six, seven, eight, and
-      # nine also count as valid "digits".
       class Part2 < Part1
         protected
 
