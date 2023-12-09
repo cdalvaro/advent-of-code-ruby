@@ -150,7 +150,6 @@ module AdventOfCode
       ##
       # Class for solving Day 02 - Part 2 puzzle
       class Part2 < Part1
-
         ##
         # Find the sum of the powers for the minimum valid sets.
         #
