@@ -4,34 +4,47 @@ module AdventOfCode
 
       class Set
 
-        @blue: Integer
-        @green: Integer
-        @red: Integer
         @power: Integer
 
-        def blue: () -> Integer
-
-        def green: () -> Integer
-
-        def red: () -> Integer
+        attr_reader blue: Integer
+        attr_reader green: Integer
+        attr_reader red: Integer
 
         def power: () -> Integer
       end
 
       class Game
 
-        @id: Integer
-        @sets: [Set]
-
-        def id: () -> Integer
-
-        def sets: () -> [Set]
+        attr_reader id: Integer
+        attr_reader sets: [Set]
 
         def valid?: (Integer, Integer, Integer) -> bool
       end
 
       class Part1
 
+        attr_reader games: [Game]
+
+        def answer: (Integer, Integer, Integer) -> Integer
+
+        def load_games: ([String]) -> [Game]
+
+        def parse_game_id: (String) -> Integer
+
+        def parse_set: (String) -> Set
+
+        def valid_games: (Integer, Integer, Integer) -> [Game]
+      end
+
+      class Part2
+
+        @minimum_valid_sets: {Game: Set}
+
+        def answer: () -> Integer
+
+        def minimum_valid_sets: () -> {Game: Set}
+
+        def minimum_valid_set_for: (Game) -> Set
       end
 
     end

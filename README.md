@@ -1,3 +1,5 @@
+<a href="https://www.ruby-lang.org"><img src="https://s3.cdalvaro.io/github.com/cdalvaro/advent-of-code-2023/RubyLang.png" alt="Ruby" width="64px" margin="5px" align="right"/></a>
+
 # Advent of Code 2023
 
 This repo contains my solutions to the [Advent of Code 2023](https://adventofcode.com/2023) challenges, written in the [Ruby](https://www.ruby-lang.org) programming language.
@@ -18,10 +20,10 @@ bundle exec rake test
 
 ## Puzzles
 
-<a href="https://www.ruby-lang.org"><img src="https://s3.cdalvaro.io/github.com/cdalvaro/advent-of-code-2023/RubyLang.png" alt="Ruby" width="86px" margin="5px" align="right"/></a>
-
-|                 Day |                    Solution                     | Rank  |
-|--------------------:|:-----------------------------------------------:|:-----:|
-| [**1**][day01_link] | [`lib/puzzles/day01.rb`](lib/puzzles/day01.rb)  | ⭐🌟✴️ |
+|               Day |                    Solution                    | Rank  |
+|------------------:|:----------------------------------------------:|:-----:|
+| [1️⃣][day01_link] | [`lib/puzzles/day01.rb`](lib/puzzles/day01.rb) | ⭐🌟✴️ |
+| [2️⃣][day02_link] | [`lib/puzzles/day02.rb`](lib/puzzles/day02.rb) | ⭐🌟✴️ |
 
 [day01_link]: https://adventofcode.com/2023/day/1
+[day02_link]: https://adventofcode.com/2023/day/2
