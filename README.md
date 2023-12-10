@@ -24,6 +24,8 @@ bundle exec rake test
 |------------------:|:----------------------------------------------:|:-----:|
 | [1️⃣][day01_link] | [`lib/puzzles/day01.rb`](lib/puzzles/day01.rb) | ⭐🌟✴️ |
 | [2️⃣][day02_link] | [`lib/puzzles/day02.rb`](lib/puzzles/day02.rb) | ⭐🌟✴️ |
+| [3️⃣][day03_link] | [`lib/puzzles/day03.rb`](lib/puzzles/day03.rb) | ⭐🌟✴️ |
 
 [day01_link]: https://adventofcode.com/2023/day/1
 [day02_link]: https://adventofcode.com/2023/day/2
+[day03_link]: https://adventofcode.com/2023/day/3
