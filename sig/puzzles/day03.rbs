@@ -1,0 +1,49 @@
+module AdventOfCode
+  module Puzzles
+    module Day03
+
+      class Gear
+        attr_reader symbol: String
+        attr_reader index: String
+        attr_reader numbers: [Integer]
+
+        @ratio: Integer
+
+        def ratio: () -> Integer
+      end
+
+      class Part1
+        @part_numbers: [Integer]
+
+        attr_reader numbers: [{Integer: String}]
+        attr_reader symbols: [{Integer: Integer}]
+
+        def adjacent_rows_range: (Integer, Integer) -> Range[Integer]
+
+        def adjacent_rows_symbols: ([[Integer]], Integer) -> [Integer]
+
+        def answer: () -> Integer
+
+        def find_elements_in_line: (String, Regexp | String) -> {Integer: String}
+
+        def extract_numbers: ([String]) -> [{Integer: String}]
+
+        def extract_symbols: ([String]) -> [{Integer: String}]
+
+        def part_numbers: () -> [Integer]
+
+        def select_numbers: ([{Integer: String}]) -> [Integer]
+      end
+
+      class Part2
+        attr_reader gears: [Gear]
+
+        def answer: () -> Integer
+
+        def find_adjacent_numbers: (Integer, Integer) -> [Integer]
+
+        def find_gears: () -> [Gear]
+      end
+    end
+  end
+end
