@@ -1,9 +1,7 @@
 module AdventOfCode
-  module Puzzles
+  module Puzzles2023
     module Day01
-
       class Part1
-
         @calibration_values: [Integer]
 
         attr_reader file_contents: [String]
@@ -20,7 +18,6 @@ module AdventOfCode
       end
 
       class Part2
-
         TRANSLATIONS: { String: Integer }
 
         def find_first_number: (String) -> Integer

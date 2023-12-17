@@ -1,0 +1,31 @@
+module AdventOfCode
+  module Test
+    module Puzzles2023
+      module Day03
+        class Part1Test
+          def setup: -> untyped
+
+          def teardown: -> untyped
+
+          def test_answer_input_set: -> untyped
+
+          def test_answer_test_data_set: -> untyped
+
+          def test_part_numbers_test_set: -> untyped
+        end
+
+        class Part2Test
+          def setup: -> untyped
+
+          def teardown: -> untyped
+
+          def test_answer_input_set: -> untyped
+
+          def test_answer_test_data_set: -> untyped
+
+          def test_gears_test_set: -> untyped
+        end
+      end
+    end
+  end
+end

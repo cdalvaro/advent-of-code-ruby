@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module AdventOfCode
-  module Puzzles
+  module Puzzles2023
     ##
     # Advent of Code 2023 - Day 3
     # https://adventofcode.com/2023/day/3

@@ -1,9 +1,7 @@
 module AdventOfCode
-  module Puzzles
+  module Puzzles2023
     module Day02
-
       class Set
-
         @power: Integer
 
         attr_reader blue: Integer
@@ -14,7 +12,6 @@ module AdventOfCode
       end
 
       class Game
-
         attr_reader id: Integer
         attr_reader sets: [Set]
 
@@ -22,7 +19,6 @@ module AdventOfCode
       end
 
       class Part1
-
         attr_reader games: [Game]
 
         def answer: (Integer, Integer, Integer) -> Integer
@@ -37,16 +33,14 @@ module AdventOfCode
       end
 
       class Part2
-
-        @minimum_valid_sets: {Game: Set}
+        @minimum_valid_sets: { Game: Set }
 
         def answer: () -> Integer
 
-        def minimum_valid_sets: () -> {Game: Set}
+        def minimum_valid_sets: () -> { Game: Set }
 
         def minimum_valid_set_for: (Game) -> Set
       end
-
     end
   end
 end

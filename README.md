@@ -1,8 +1,9 @@
 <a href="https://www.ruby-lang.org"><img src="https://s3.cdalvaro.io/github.com/cdalvaro/advent-of-code-2023/RubyLang.png" alt="Ruby" width="64px" margin="5px" align="right"/></a>
 
-# Advent of Code 2023
+# Advent of Code
 
-This repo contains my solutions to the [Advent of Code 2023](https://adventofcode.com/2023) challenges, written in the [Ruby](https://www.ruby-lang.org) programming language.
+This repo contains my solutions to the [Advent of Code](https://adventofcode.com) challenges, written in
+the [Ruby](https://www.ruby-lang.org) programming language.
 
 The project is compose of two main parts:
 
@@ -20,12 +21,10 @@ bundle exec rake test
 
 ## Puzzles
 
-|               Day |                    Solution                    | Rank  |
-|------------------:|:----------------------------------------------:|:-----:|
-| [1️⃣][day01_link] | [`lib/puzzles/day01.rb`](lib/puzzles/day01.rb) | ⭐🌟✴️ |
-| [2️⃣][day02_link] | [`lib/puzzles/day02.rb`](lib/puzzles/day02.rb) | ⭐🌟✴️ |
-| [3️⃣][day03_link] | [`lib/puzzles/day03.rb`](lib/puzzles/day03.rb) | ⭐🌟✴️ |
+### 2023
 
-[day01_link]: https://adventofcode.com/2023/day/1
-[day02_link]: https://adventofcode.com/2023/day/2
-[day03_link]: https://adventofcode.com/2023/day/3
+|                                        Day |                         Solution                         | Rank  |
+|-------------------------------------------:|:--------------------------------------------------------:|:-----:|
+| [1️⃣](https://adventofcode.com/2023/day/1) | [`lib/puzzles/2023/day01.rb`](lib/puzzles/2023/day01.rb) | ⭐🌟✴️ |
+| [2️⃣](https://adventofcode.com/2023/day/2) | [`lib/puzzles/2023/day02.rb`](lib/puzzles/2023/day02.rb) | ⭐🌟✴️ |
+| [3️⃣](https://adventofcode.com/2023/day/3) | [`lib/puzzles/2023/day03.rb`](lib/puzzles/2023/day03.rb) | ⭐🌟✴️ |
