@@ -28,3 +28,4 @@ bundle exec rake test
 | [1️⃣](https://adventofcode.com/2023/day/1) | [`lib/puzzles/2023/day01.rb`](lib/puzzles/2023/day01.rb) | ⭐🌟✴️ |
 | [2️⃣](https://adventofcode.com/2023/day/2) | [`lib/puzzles/2023/day02.rb`](lib/puzzles/2023/day02.rb) | ⭐🌟✴️ |
 | [3️⃣](https://adventofcode.com/2023/day/3) | [`lib/puzzles/2023/day03.rb`](lib/puzzles/2023/day03.rb) | ⭐🌟✴️ |
+| [4️⃣](https://adventofcode.com/2023/day/4) | [`lib/puzzles/2023/day04.rb`](lib/puzzles/2023/day04.rb) | ⭐🌟✴️ |
