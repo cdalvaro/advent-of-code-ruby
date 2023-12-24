@@ -2,6 +2,8 @@
 
 source "https://rubygems.org"
 
+ruby file: ".ruby-version"
+
 group :development do
   # bootstrapping
   gem "minitest", "~> 5.0"
