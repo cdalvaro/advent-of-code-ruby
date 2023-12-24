@@ -16,6 +16,10 @@ group :development do
   gem "rubocop-rake"
   gem "rubocop-shopify"
 
+  # codecov
+  gem "simplecov"
+  gem "simplecov-cobertura"
+
   # Type Signature for Ruby
   gem "rbs", "~> 3.0"
 end

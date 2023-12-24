@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
+require "test_helper"
 require "puzzles/2023/day03"
-
-require "minitest/autorun"
 
 module AdventOfCode
   module Test
