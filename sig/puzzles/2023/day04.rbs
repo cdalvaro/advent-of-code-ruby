@@ -1,0 +1,33 @@
+module AdventOfCode
+  module Puzzles2023
+    module Day04
+      class Card
+        @matches: [Integer]
+
+        attr_reader id: Integer
+        attr_reader owned: [Integer]
+        attr_reader winning: [Integer]
+
+        def matches: () -> [Integer]
+      end
+
+      class Part1
+        attr_reader cards: [Card]
+
+        def answer: () -> Integer
+
+        def extract_cards: ([String]) -> [Card]
+
+        def points: () -> [Integer]
+      end
+
+      class Part2
+        def answer: () -> Integer
+
+        def get_matching_cards: () -> [Card]
+
+        def total_cards: () -> [ { String: Card|Integer } ]
+      end
+    end
+  end
+end
