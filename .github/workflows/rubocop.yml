@@ -1,4 +1,4 @@
-name: Advent of Code 2023 - Rubocop
+name: Rubocop
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: Rubocop checks
+    name: Checks
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
