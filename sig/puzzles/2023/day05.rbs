@@ -1,0 +1,13 @@
+module AdventOfCode
+  module Puzzles2023
+    module Day05
+      class Part1
+
+      end
+
+      class Part2
+
+      end
+    end
+  end
+end
