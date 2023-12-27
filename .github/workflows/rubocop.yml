@@ -1,0 +1,24 @@
+name: Advent of Code 2023 - Rubocop
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Rubocop checks
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler: latest
+          bundler-cache: true
+
+      - name: Run rubocop checks
+        run: bundle exec rake rubocop
