@@ -26,3 +26,5 @@ jobs:
         with:
           rubocop_version: gemfile
           reporter: github-pr-review
+          skip_install: true
+          use_bundler: true
