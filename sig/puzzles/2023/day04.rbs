@@ -21,9 +21,7 @@ module AdventOfCode
         def points: () -> [Integer]
       end
 
-      class Part2
-        def answer: () -> Integer
-
+      class Part2 < Part1
         def get_matching_cards: () -> [Card]
 
         def total_cards: () -> [ { String: Card|Integer } ]

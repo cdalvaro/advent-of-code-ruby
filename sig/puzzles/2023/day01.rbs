@@ -17,12 +17,8 @@ module AdventOfCode
         def select_number: (String) -> Integer
       end
 
-      class Part2
+      class Part2 < Part1
         TRANSLATIONS: { String: Integer }
-
-        def find_first_number: (String) -> Integer
-
-        def find_last_number: (String) -> Integer
 
         def translate_contents: () -> void
 
