@@ -34,10 +34,8 @@ module AdventOfCode
         def select_numbers: ([{ Integer: String }]) -> [Integer]
       end
 
-      class Part2
+      class Part2 < Part1
         attr_reader gears: [Gear]
-
-        def answer: () -> Integer
 
         def find_adjacent_numbers: (Integer, Integer) -> [Integer]
 

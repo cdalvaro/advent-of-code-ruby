@@ -32,14 +32,10 @@ module AdventOfCode
         def valid_games: (Integer, Integer, Integer) -> [Game]
       end
 
-      class Part2
+      class Part2 < Part1
         COLORS: [Symbol]
 
-        @minimum_valid_sets: { Game: Set }
-
-        def answer: () -> Integer
-
-        def minimum_valid_sets: () -> { Game: Set }
+        attr_reader minimum_valid_sets: { Game: Set }
 
         def minimum_valid_set_for: (Game) -> Set
       end
