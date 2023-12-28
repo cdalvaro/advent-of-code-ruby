@@ -33,6 +33,8 @@ module AdventOfCode
       end
 
       class Part2
+        COLORS: [Symbol]
+
         @minimum_valid_sets: { Game: Set }
 
         def answer: () -> Integer

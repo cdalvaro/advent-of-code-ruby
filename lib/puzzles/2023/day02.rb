@@ -168,6 +168,8 @@ module AdventOfCode
 
         protected
 
+        COLORS = %i[blue green red].freeze
+
         ##
         # Find the minimum valid set for a game.
         # The minimum valid set is the set with the maximum number of
@@ -178,9 +180,9 @@ module AdventOfCode
         # @return [Set] minimum valid set
         def minimum_valid_set_for(game:)
           # Find the maximum number of blue, green, and red cubes in each set
-          minimum_set = { blue: 0, green: 0, red: 0 }
+          minimum_set = COLORS.to_h { |color| [color, 0] }
           game.sets.each do |set|
-            %i[blue green red].each do |color|
+            COLORS.each do |color|
               minimum_set[color] = [set.send(color), minimum_set[color]].max
             end
           end
