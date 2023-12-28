@@ -102,7 +102,7 @@ module AdventOfCode
         #
         # @return [Integer] sum of the game ids
         def answer(blue:, green:, red:)
-          valid_games(blue:, green:, red:).map(&:id).sum
+          valid_games(blue:, green:, red:).sum(&:id)
         end
 
         protected
@@ -155,7 +155,7 @@ module AdventOfCode
         #
         # @return [Integer] sum of the powers
         def answer
-          minimum_valid_sets.values.map(&:power).sum
+          minimum_valid_sets.values.sum(&:power)
         end
 
         ##

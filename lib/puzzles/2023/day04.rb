@@ -95,7 +95,7 @@ module AdventOfCode
         #
         # @return [Integer] total number of cards
         def answer
-          total_cards.map { |c| c[:copies] }.sum
+          total_cards.sum { |c| c[:copies] }
         end
 
         ##

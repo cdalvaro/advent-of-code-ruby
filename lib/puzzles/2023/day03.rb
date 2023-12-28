@@ -179,7 +179,7 @@ module AdventOfCode
         ##
         # Get the sum of the ratios of the gears.
         def answer
-          gears.map(&:ratio).sum
+          gears.sum(&:ratio)
         end
 
         protected
