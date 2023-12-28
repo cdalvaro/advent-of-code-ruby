@@ -21,4 +21,8 @@ jobs:
           bundler-cache: true
 
       - name: Run rubocop checks
-        run: bundle exec rake rubocop
+        uses: reviewdog/action-rubocop@v2
+        with:
+          rubocop_version: gemfile
+          use_bundler: true
+          reporter: github-pr-review
