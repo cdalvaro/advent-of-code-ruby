@@ -7,17 +7,17 @@ module AdventOfCode
   module Test
     module Puzzles2023
       module Day05
-        class ConversionTest < Minitest::Test
-          attr_reader :conversion
+        class ConverterTest < Minitest::Test
+          attr_reader :converter
 
           def setup
             source = :seed
             destination = :soil
             relations = [
-              { source: 98...100, destination: 50...52 },
-              { source: 50...98, destination: 52...100 }
+              AdventOfCode::Puzzles2023::Day05::Relation.new(source: 98...100, destination: 50...52),
+              AdventOfCode::Puzzles2023::Day05::Relation.new(source: 50...98, destination: 52...100)
             ]
-            @conversion = AdventOfCode::Puzzles2023::Day05::Converter.new(source:, destination:, relations:)
+            @converter = AdventOfCode::Puzzles2023::Day05::Converter.new(source:, destination:, relations:)
           end
 
           def teardown
@@ -25,7 +25,7 @@ module AdventOfCode
           end
 
           def test_conversion
-            assert_equal([81, 14, 57, 13], [79, 14, 55, 13].map { |value| conversion.convert(value:) })
+            assert_equal([81, 14, 57, 13], [79, 14, 55, 13].map { |value| converter.convert(value:) })
           end
         end
 

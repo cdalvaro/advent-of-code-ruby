@@ -1,12 +1,50 @@
 module AdventOfCode
   module Puzzles2023
     module Day05
-      class Part1
+      class Relation
+        @source: Range[Integer]
+        @destination: Range[Integer]
 
+        def convert: (Integer) -> Integer?
       end
 
-      class Part2
+      class Converter
+        @relations: [Relation]
 
+        attr_reader source: Symbol
+        attr_reader destination: Symbol
+
+        def convert: (Integer) -> Integer
+      end
+
+      class Almanac
+        attr_reader converters: { Symbol: Converter }
+        attr_reader targets: [Symbol]
+
+        def convert: (Integer, Symbol, Symbol) -> Integer
+
+        def parse_file: (String) -> void
+
+        def parse_header: (String) -> [Symbol]?
+
+        def parse_map: (String) -> Relation
+
+        def parse_maps: ([String]) -> void
+      end
+
+      class Part1
+        attr_reader almanac: Almanac
+        attr_reader seeds: [Integer]
+
+        def answer: () -> Integer?
+
+        def build_almanac: (String) -> void
+
+        def parse_seeds: (String) -> void
+      end
+
+      class Part2 < Part1
+        def valid_seed?: (Integer) -> bool
       end
     end
   end
