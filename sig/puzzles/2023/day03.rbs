@@ -2,20 +2,16 @@ module AdventOfCode
   module Puzzles2023
     module Day03
       class Gear
-        @ratio: Integer
-
         attr_reader symbol: String
         attr_reader index: String
         attr_reader numbers: [Integer]
-
-        def ratio: () -> Integer
+        attr_reader ratio: Integer
       end
 
       class Part1
-        @part_numbers: [Integer]
-
         attr_reader numbers: [{ Integer: String }]
         attr_reader symbols: [{ Integer: Integer }]
+        attr_reader part_numbers: [Integer]
 
         def adjacent_rows_range: (Integer, Integer) -> Range[Integer]
 
@@ -28,8 +24,6 @@ module AdventOfCode
         def extract_numbers: ([String]) -> [{ Integer: String }]
 
         def extract_symbols: ([String]) -> [{ Integer: String }]
-
-        def part_numbers: () -> [Integer]
 
         def select_numbers: ([{ Integer: String }]) -> [Integer]
       end

@@ -2,50 +2,26 @@
 
 module AdventOfCode
   module Puzzles2023
-    ##
-    # Advent of Code 2023 - Day 3
-    # https://adventofcode.com/2023/day/3
     module Day03
       ##
-      # Class for representing a gear
-      class Gear
-        attr_reader :symbol, :index, :numbers
-
-        ##
-        # @param symbol [String] symbol of the gear
-        # @param index [String] index of the gear
-        # @param numbers [Array<Integer>] array of numbers of the gear
-        def initialize(symbol:, index:, numbers:)
-          @symbol = symbol
-          @index = index
-          @numbers = numbers
-        end
-
-        ##
-        # Get the ratio of the gear.
-        #
-        # @return [Integer] ratio of the gear
-        def ratio
-          @ratio ||= numbers.reduce(:*)
-        end
-      end
-
-      ##
-      # Class for solving Day 03 - Part 1 puzzle
+      # Class for solving Day 3 - Part 1 puzzle
       class Part1
         ##
         # An array of hashes with the indexes and numbers of the
         # numbers in each line.
+        # @return [Array<Hash<Integer, String>>] matrix of number indexes and numbers
         attr_reader :numbers
 
         ##
         # An array of hashes with the indexes of the symbols and
         # the current symbol in each line.
+        # @return [Array<Hash<Integer, String>>] matrix of symbol indexes and symbols
         attr_reader :symbols
 
         ##
         # @param file [String] path to input file
-        def initialize(file:)
+        def initialize(file: nil)
+          file ||= "#{File.dirname(__FILE__)}/input.txt"
           file_contents = File.readlines(file, chomp: true)
           @symbols = extract_symbols(file_contents)
           @numbers = extract_numbers(file_contents)
@@ -53,6 +29,8 @@ module AdventOfCode
 
         ##
         # Get the sum of the engine part numbers.
+        #
+        # @return [Integer] sum of the engine part numbers
         def answer
           part_numbers.sum
         end
@@ -159,66 +137,6 @@ module AdventOfCode
           # Select all different indexes from the adjacent rows
           # Duplicated indexes can be removed
           symbols.values_at(*adjacent_symbol_rows).map(&:keys).flatten.uniq
-        end
-      end
-
-      ##
-      # Class for solving Day 03 - Part 2 puzzle
-      class Part2 < Part1
-        ##
-        # Array of Gear objects
-        attr_reader :gears
-
-        ##
-        # @param file [String] path to input file
-        def initialize(file:)
-          super
-          @gears = find_gears
-        end
-
-        ##
-        # Get the sum of the ratios of the gears.
-        def answer
-          gears.sum(&:ratio)
-        end
-
-        protected
-
-        def find_gears
-          gears = []
-          symbols.each_with_index do |row_symbols, row_index|
-            row_symbols.each do |symbol_index, symbol|
-              adjacent_numbers = find_adjacent_numbers(row_index, symbol_index)
-              if adjacent_numbers.length == 2
-                gears << Gear.new(symbol:, index: "#{row_index}:#{symbol_index}", numbers: adjacent_numbers)
-              end
-            end
-          end
-          gears
-        end
-
-        ##
-        # Find the numbers next to the given symbol.
-        #
-        # @param row_index [Integer] index of the row to check
-        # @param symbol_index [Integer] index of the symbol to check
-        #
-        # @return [Array<Integer>] array of numbers next to the symbol
-        def find_adjacent_numbers(row_index, symbol_index)
-          # Adjacent rows
-          adjacent_number_rows = adjacent_rows_range(row_index, numbers.length - 1)
-
-          # Check numbers next to the current symbol
-          adjacent_numbers = []
-          adjacent_number_rows.each do |number_row_idx|
-            numbers[number_row_idx].each do |number_idx, number|
-              # Indexes occupied by the current number
-              number_limits = number_idx - 1..number_idx + number.length
-              adjacent_numbers << number.to_i if number_limits.include?(symbol_index)
-            end
-          end
-
-          adjacent_numbers
         end
       end
     end
