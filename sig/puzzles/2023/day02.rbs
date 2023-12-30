@@ -2,13 +2,10 @@ module AdventOfCode
   module Puzzles2023
     module Day02
       class Set
-        @power: Integer
-
         attr_reader blue: Integer
         attr_reader green: Integer
         attr_reader red: Integer
-
-        def power: () -> Integer
+        attr_reader power: Integer
       end
 
       class Game
