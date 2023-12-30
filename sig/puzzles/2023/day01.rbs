@@ -2,13 +2,10 @@ module AdventOfCode
   module Puzzles2023
     module Day01
       class Part1
-        @calibration_values: [Integer]
-
         attr_reader file_contents: [String]
+        attr_reader calibration_values: [Integer]
 
         def answer: () -> Integer
-
-        def calibration_values: () -> [Integer]
 
         def find_first_number: () -> Integer?
 
