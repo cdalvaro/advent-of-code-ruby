@@ -1,0 +1,29 @@
+module AdventOfCode
+  module Test
+    module Puzzles2023
+      module Day06
+        class Part1Test < MiniTest::Test
+          def setup: -> untyped
+
+          def teardown: -> untyped
+
+          def test_find_time_ranges_test_data_set: -> untyped
+
+          def test_answer_test_data_set: -> untyped
+
+          def test_answer_input_set: -> untyped
+        end
+
+        class Part2Test < MiniTest::Test
+          def setup: -> untyped
+
+          def teardown: -> untyped
+
+          def test_answer_test_data_set: -> untyped
+
+          def test_answer_input_set: -> untyped
+        end
+      end
+    end
+  end
+end
