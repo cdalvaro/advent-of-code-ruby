@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "test_helper"
-require "puzzles/2023/day01"
+require "puzzles/2023/day01/day01"
 
 module AdventOfCode
   module Test
@@ -33,8 +33,7 @@ module AdventOfCode
           end
 
           def test_answer_real_set
-            input_file = "#{File.dirname(__FILE__)}/input.txt"
-            puzzle = AdventOfCode::Puzzles2023::Day01::Part1.new(file: input_file)
+            puzzle = AdventOfCode::Puzzles2023::Day01::Part1.new
 
             assert_equal 54_450, puzzle.answer
           end
@@ -66,8 +65,7 @@ module AdventOfCode
           end
 
           def test_answer_real_set
-            input_file = "#{File.dirname(__FILE__)}/input.txt"
-            puzzle = AdventOfCode::Puzzles2023::Day01::Part2.new(file: input_file)
+            puzzle = AdventOfCode::Puzzles2023::Day01::Part2.new
 
             assert_equal 54_265, puzzle.answer
           end
