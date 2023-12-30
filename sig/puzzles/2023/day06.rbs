@@ -1,0 +1,28 @@
+module AdventOfCode
+  module Puzzles2023
+    module Day06
+      class Race
+        attr_reader time: Integer
+        attr_reader distance: Integer
+      end
+
+      class Part1
+        attr_reader races: [Race]
+
+        def answer: () -> Integer
+
+        def find_time_ranges: () -> [Range[Integer]]
+
+        def parse_file: (String) -> void
+
+        def parse_values: ([String], String) -> [Integer]
+
+        def find_time_range: (Race) -> Range[Integer]
+
+        def find_race_distance_times: (Race) -> [Float]
+
+        def valid_time?: (Integer) -> bool
+      end
+    end
+  end
+end
