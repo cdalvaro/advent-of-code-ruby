@@ -10,24 +10,58 @@ The project is compose of two main parts:
 - A library, located in the [`lib/`](lib/) directory, containing the code for the solutions.
 - A set of tests, located in the [`test/`](test/) directory, containing the tests for the solutions.
 
-Tests are written using the [:octocat: minitest](https://github.com/minitest/minitest) framework.
+Tests are written using the [minitest](https://github.com/minitest/minitest) framework.
 
 To run the tests, simply run the following command:
 
 ```bash
 bundle install
-bundle exec rake test
+SKIP_SLOW_TESTS=1 bundle exec rake test
 ```
 
 ## Puzzles
 
-### 2023
+<a href="https://www.ruby-lang.org"><img src="https://fortnite.gg/img/items/3275/featured.png" height="350px" margin="5px" align="right"/></a>
 
-|                                        Day |                         Solution                         | Rank  |
-|-------------------------------------------:|:--------------------------------------------------------:|:-----:|
-| [1️⃣](https://adventofcode.com/2023/day/1) | [`lib/puzzles/2023/day01.rb`](lib/puzzles/2023/day01.rb) | ⭐🌟✴️ |
-| [2️⃣](https://adventofcode.com/2023/day/2) | [`lib/puzzles/2023/day02.rb`](lib/puzzles/2023/day02.rb) | ⭐🌟✴️ |
-| [3️⃣](https://adventofcode.com/2023/day/3) | [`lib/puzzles/2023/day03.rb`](lib/puzzles/2023/day03.rb) | ⭐🌟✴️ |
-| [4️⃣](https://adventofcode.com/2023/day/4) | [`lib/puzzles/2023/day04.rb`](lib/puzzles/2023/day04.rb) | ⭐🌟✴️ |
-| [5️⃣](https://adventofcode.com/2023/day/5) | [`lib/puzzles/2023/day05.rb`](lib/puzzles/2023/day05.rb) | ⭐🌟✴️ |
-| [6️⃣](https://adventofcode.com/2023/day/6) | [`lib/puzzles/2023/day06.rb`](lib/puzzles/2023/day06.rb) | ⭐🌟✴️ |
+<details open>
+  <summary><b>Advent of Code - <a href="https://adventofcode.com/2023">2023</a></b></summary>
+  <p>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Solution</th>
+        <th>Rank</th>
+      </tr>
+      <tr>
+        <td>1️⃣ <a href="https://adventofcode.com/2023/day/1">Trebuchet?!</a></td>
+        <td><a href="lib/puzzles/2023/day01"><code>lib/puzzles/2023/day01</code></a></td>
+        <td>🌟🌟</td>
+      </tr>
+      <tr>
+        <td>2️⃣ <a href="https://adventofcode.com/2023/day/2">Cube Conundrum</a></td>
+        <td><a href="lib/puzzles/2023/day02"><code>lib/puzzles/2023/day02</code></a></td>
+        <td>🌟🌟</td>
+      </tr>
+      <tr>
+        <td>3️⃣ <a href="https://adventofcode.com/2023/day/3">Gear Ratios</a></td>
+        <td><a href="lib/puzzles/2023/day03"><code>lib/puzzles/2023/day03</code></a></td>
+        <td>🌟🌟</td>
+      </tr>
+      <tr>
+        <td>4️⃣ <a href="https://adventofcode.com/2023/day/4">Scratchcards</a></td>
+        <td><a href="lib/puzzles/2023/day04"><code>lib/puzzles/2023/day04</code></a></td>
+        <td>🌟🌟</td>
+      </tr>
+      <tr>
+        <td>5️⃣ <a href="https://adventofcode.com/2023/day/5">If You Give A Seed A Fertilizer</a></td>
+        <td><a href="lib/puzzles/2023/day05"><code>lib/puzzles/2023/day05</code></a></td>
+        <td>🌟🌟</td>
+      </tr>
+      <tr>
+        <td>6️⃣ <a href="https://adventofcode.com/2023/day/6">Wait For It</a></td>
+        <td><a href="lib/puzzles/2023/day06"><code>lib/puzzles/2023/day06</code></a></td>
+        <td>🌟🌟</td>
+      </tr>
+    </table>
+  </p>
+</details>
