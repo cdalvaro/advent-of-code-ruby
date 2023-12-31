@@ -2,13 +2,10 @@ module AdventOfCode
   module Puzzles2023
     module Day04
       class Card
-        @matches: [Integer]
-
         attr_reader id: Integer
         attr_reader owned: [Integer]
         attr_reader winning: [Integer]
-
-        def matches: () -> [Integer]
+        attr_reader matches: [Integer]
       end
 
       class Part1
@@ -16,7 +13,7 @@ module AdventOfCode
 
         def answer: () -> Integer
 
-        def extract_cards: ([String]) -> [Card]
+        def parse_cards: ([String]) -> void
 
         def points: () -> [Integer]
       end
