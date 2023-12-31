@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 require "test_helper"
-require "puzzles/2023/day05"
+require "puzzles/2023/day05/almanac"
+require "puzzles/2023/day05/converter"
+require "puzzles/2023/day05/day05"
 
 module AdventOfCode
   module Test
@@ -79,8 +81,7 @@ module AdventOfCode
           end
 
           def test_answer_input_set
-            input_file = "#{File.dirname(__FILE__)}/input.txt"
-            puzzle = AdventOfCode::Puzzles2023::Day05::Part1.new(file: input_file)
+            puzzle = AdventOfCode::Puzzles2023::Day05::Part1.new
 
             assert_equal 318_728_750, puzzle.answer
           end
@@ -107,8 +108,7 @@ module AdventOfCode
           def test_answer_input_set
             skip "Takes too long to run" if ENV["SKIP_SLOW_TESTS"]
 
-            input_file = "#{File.dirname(__FILE__)}/input.txt"
-            puzzle = AdventOfCode::Puzzles2023::Day05::Part2.new(file: input_file)
+            puzzle = AdventOfCode::Puzzles2023::Day05::Part2.new
 
             assert_equal 37_384_986, puzzle.answer
           end
