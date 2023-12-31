@@ -1,31 +1,10 @@
 # frozen_string_literal: true
 
+require_relative "race"
+
 module AdventOfCode
   module Puzzles2023
-    ##
-    # Advent of Code 2023 - Day 6
-    # https://adventofcode.com/2023/day/6
     module Day06
-      ##
-      # Class for representing a race
-      class Race
-        ##
-        # @return [Integer] total time in milliseconds
-        attr_reader :time
-
-        ##
-        # @return [Integer] distance to beat in millimeters
-        attr_reader :distance
-
-        ##
-        # @param time [Integer] total time in milliseconds
-        # @param distance [Integer] distance to beat in millimeters
-        def initialize(time:, distance:)
-          @time = time
-          @distance = distance
-        end
-      end
-
       ##
       # Class for solving Day 6 - Part 1 puzzle
       class Part1
@@ -35,7 +14,8 @@ module AdventOfCode
 
         ##
         # @param file [String] file name of the input file
-        def initialize(file:)
+        def initialize(file: nil)
+          file ||= "#{File.dirname(__FILE__)}/input.txt"
           parse_file(file:)
         end
 
@@ -156,24 +136,6 @@ module AdventOfCode
         # @return [Boolean] whether the `charging_time` is valid
         def valid_time?(race:, charging_time:)
           charging_time * (race.time - charging_time) > race.distance
-        end
-      end
-
-      ##
-      # Class for solving Day 6 - Part 2 puzzle
-      class Part2 < Part1
-        protected
-
-        ##
-        # Parse the values from the file contents for a given key.
-        #
-        # @param file_contents [Array<String>] array of lines
-        # @param key [String] key to find
-        #
-        # @return [Array<Integer>] array of values
-        def parse_values(file_contents, key:)
-          values = super
-          [values.join.to_i]
         end
       end
     end
