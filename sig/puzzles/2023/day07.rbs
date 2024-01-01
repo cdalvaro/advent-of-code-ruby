@@ -27,6 +27,8 @@ module AdventOfCode
         attr_reader type: HandType
 
         def cards_hierarchy: () -> [String]
+
+        def compare_cards: (String) -> Integer
       end
 
       class Part1

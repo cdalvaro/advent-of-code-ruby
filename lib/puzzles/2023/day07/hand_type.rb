@@ -20,6 +20,7 @@ module AdventOfCode
         # @param hand [String] string of cards
         def initialize(hand:)
           raise "Invalid size for hand: #{hand}" unless hand.size == 5
+
           @id, @name = find_type(hand)
         end
 
@@ -72,7 +73,7 @@ module AdventOfCode
         # @param hand [String] string of cards
         #
         # @return [Array<Integer, String>] id and name of the hand type
-        def find_type(hand)
+        def find_type(hand) # rubocop:disable Metrics/CyclomaticComplexity
           # Count the number of repeated cards
           count = group_cards(hand)
 

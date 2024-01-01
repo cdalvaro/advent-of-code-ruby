@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'hand_type'
+require_relative "hand_type"
 
 module AdventOfCode
   module Puzzles2023
@@ -41,13 +41,24 @@ module AdventOfCode
         def <=>(other)
           return type.id <=> other.type.id unless type.id == other.type.id
 
-          cards.chars.zip(other.cards.chars).each do |a, b|
-            next if a == b
+          compare_cards(other.cards)
+        end
 
-            return cards_hierarchy.index(a) <=> cards_hierarchy.index(b)
+        ##
+        # Compare the cards of this hand with the cards of another hand.
+        #
+        # @param other_cards [String] cards of the other hand
+        #
+        # @return [Integer] -1 if this hand is smaller, 0 if they are equal, 1 if this hand is bigger
+        def compare_cards(other_cards)
+          cmp = 0
+          cards.chars.zip(other_cards.chars).each do |a, b|
+            if a != b
+              cmp = cards_hierarchy.index(a) <=> cards_hierarchy.index(b)
+              break
+            end
           end
-
-          0
+          cmp
         end
 
         protected
