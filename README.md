@@ -1,4 +1,4 @@
-<a href="https://www.ruby-lang.org"><img src="https://s3.cdalvaro.io/github.com/cdalvaro/advent-of-code-2023/RubyLang.png" alt="Ruby" width="64px" margin="5px" align="right"/></a>
+<a href="https://www.ruby-lang.org"><img src="https://s3.cdalvaro.io/github.com/cdalvaro/advent-of-code/RubyLang.png" alt="Ruby" width="64px" margin="5px" align="right"/></a>
 
 # Advent of Code
 
@@ -21,7 +21,7 @@ SKIP_SLOW_TESTS=1 bundle exec rake test
 
 ## Puzzles
 
-<a href="https://www.ruby-lang.org"><img src="https://fortnite.gg/img/items/3275/featured.png" height="300px" align="right"/></a>
+<a href="https://www.ruby-lang.org"><img src="https://s3.cdalvaro.io/github.com/cdalvaro/advent-of-code/Holly.png" height="350px" align="right"/></a>
 
 <details open>
   <summary><b>Advent of Code - <a href="https://adventofcode.com/2023">2023</a></b></summary>
