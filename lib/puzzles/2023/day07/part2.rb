@@ -21,9 +21,7 @@ module AdventOfCode
           #
           # @return [Array<Integer>] array of card counts
           def group_cards(hand)
-            grouped = hand.chars.group_by(&:itself).to_h do |k, v|
-              [k, v.size]
-            end
+            grouped = hand.chars.group_by(&:itself).transform_values(&:size)
 
             # Check for jokers
             if grouped.key?("J")
@@ -43,7 +41,6 @@ module AdventOfCode
         # Override Hand to use the new HandType.
         # Also, override the cards hierarchy to give jokers less weight.
         class Hand < Day07::Hand
-
           ##
           # Type of the hand
           #

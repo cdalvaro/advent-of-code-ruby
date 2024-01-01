@@ -21,7 +21,7 @@ SKIP_SLOW_TESTS=1 bundle exec rake test
 
 ## Puzzles
 
-<a href="https://www.ruby-lang.org"><img src="https://fortnite.gg/img/items/3275/featured.png" height="320px" margin="5px" align="right"/></a>
+<a href="https://www.ruby-lang.org"><img src="https://fortnite.gg/img/items/3275/featured.png" height="300px" margin="5px" align="right"/></a>
 
 <details open>
   <summary><b>Advent of Code - <a href="https://adventofcode.com/2023">2023</a></b></summary>
