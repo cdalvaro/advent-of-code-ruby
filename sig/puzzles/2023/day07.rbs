@@ -1,0 +1,51 @@
+module AdventOfCode
+  module Puzzles2023
+    module Day07
+      class HandType
+        HIGH_CARD: String
+        ONE_PAIR: String
+        TWO_PAIRS: String
+        THREE_OF_A_KIND: String
+        FULL_HOUSE: String
+        FOUR_OF_A_KIND: String
+        FIVE_OF_A_KIND: String
+        SORTED_TYPES: [String]
+
+        attr_reader id: Integer
+        attr_reader name: String
+
+        def find_type: (String) -> [Integer, String]
+
+        def group_cards: (String) -> [Integer]
+      end
+
+      class Hand
+        CARDS_HIERARCHY: [String]
+
+        attr_reader cards: String
+        attr_reader bid: Integer
+        attr_reader type: HandType
+
+        def cards_hierarchy: () -> [String]
+      end
+
+      class Part1
+        attr_reader hands: [Hand]
+
+        def answer: () -> Integer
+
+        def parse_file: (String) -> void
+
+        def sort_hands: () -> [Hand]
+
+        def build_hand: (String, Integer) -> Hand
+      end
+
+      class Part2 < Part1
+        class Hand < Day07::Hand
+          CARDS_HIERARCHY: [String]
+        end
+      end
+    end
+  end
+end
