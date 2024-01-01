@@ -1,4 +1,4 @@
-<a href="https://www.ruby-lang.org"><img src="https://s3.cdalvaro.io/github.com/cdalvaro/advent-of-code/RubyLang.png" alt="Ruby" width="64px" margin="5px" align="right"/></a>
+<a href="https://www.ruby-lang.org"><img src="https://s3.cdalvaro.io/github.com/cdalvaro/advent-of-code/RubyLang.png" alt="Ruby" width="64px" align="right"/></a>
 
 # Advent of Code
 
