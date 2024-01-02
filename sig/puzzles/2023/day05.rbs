@@ -9,7 +9,7 @@ module AdventOfCode
       end
 
       class Converter
-        @relations: [Relation]
+        @relations: Array[Relation]
 
         attr_reader source: Symbol
         attr_reader destination: Symbol
@@ -18,23 +18,23 @@ module AdventOfCode
       end
 
       class Almanac
-        attr_reader converters: { Symbol: Converter }
+        attr_reader converters: Hash[ Symbol, Converter ]
         attr_reader targets: [Symbol]
 
         def convert: (Integer, Symbol, Symbol) -> Integer
 
         def parse_file: (String) -> void
 
-        def parse_header: (String) -> [Symbol]?
+        def parse_header: (String) -> Array[Symbol]?
 
         def parse_map: (String) -> Relation
 
-        def parse_maps: ([String]) -> void
+        def parse_maps: (Array[String]) -> void
       end
 
       class Part1
         attr_reader almanac: Almanac
-        attr_reader seeds: [Integer]
+        attr_reader seeds: Array[Integer]
 
         def answer: () -> Integer?
 

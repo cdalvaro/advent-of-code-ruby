@@ -4,36 +4,36 @@ module AdventOfCode
       class Gear
         attr_reader symbol: String
         attr_reader index: String
-        attr_reader numbers: [Integer]
+        attr_reader numbers: Array[Integer]
         attr_reader ratio: Integer
       end
 
       class Part1
-        attr_reader numbers: [{ Integer: String }]
-        attr_reader symbols: [{ Integer: Integer }]
-        attr_reader part_numbers: [Integer]
+        attr_reader numbers: Array[Hash[Integer, String]]
+        attr_reader symbols: Array[Hash[Integer, String]]
+        attr_reader part_numbers: Array[Integer]
 
         def adjacent_rows_range: (Integer, Integer) -> Range[Integer]
 
-        def adjacent_rows_symbols: ([[Integer]], Integer) -> [Integer]
+        def adjacent_rows_symbols: (Array[Hash[Integer, String]], Integer) -> Array[Integer]
 
         def answer: () -> Integer
 
-        def find_elements_in_line: (String, Regexp | String) -> { Integer: String }
+        def find_elements_in_line: (String, Regexp | String) -> Hash[Integer, String]
 
-        def extract_numbers: ([String]) -> [{ Integer: String }]
+        def extract_numbers: (Array[String]) -> Array[Hash[Integer, String]]
 
-        def extract_symbols: ([String]) -> [{ Integer: String }]
+        def extract_symbols: (Array[String]) -> Array[Hash[Integer, String]]
 
-        def select_numbers: ([{ Integer: String }]) -> [Integer]
+        def select_numbers: (Array[Hash[Integer, String]]) -> Array[Integer]
       end
 
       class Part2 < Part1
-        attr_reader gears: [Gear]
+        attr_reader gears: Array[Gear]
 
-        def find_adjacent_numbers: (Integer, Integer) -> [Integer]
+        def find_adjacent_numbers: (Integer, Integer) -> Array[Integer]
 
-        def find_gears: () -> [Gear]
+        def find_gears: () -> Array[Gear]
       end
     end
   end
