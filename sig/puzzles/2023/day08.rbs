@@ -1,0 +1,22 @@
+module AdventOfCode
+  module Puzzles2023
+    module Day08
+      class Part1
+        attr_reader instructions: Array[Symbol]
+        attr_reader nodes: Hash[Symbol, Hash[Symbol, Symbol]]
+
+        def answer: () -> Integer
+
+        def find_path: () -> Array[Symbol]
+
+        def parse_file: (String) -> void
+      end
+
+      class Part2 < Part1
+        def find_path: () -> Array[Array[Symbol]]
+
+        def find_initial_nodes: () -> Array[Symbol]
+      end
+    end
+  end
+end

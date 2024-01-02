@@ -62,10 +62,16 @@ SKIP_SLOW_TESTS=1 bundle exec rake test
         <td><a href="lib/puzzles/2023/day06"><code>lib/puzzles/2023/day06</code></a></td>
         <td>🌟🌟</td>
       </tr>
-        <tr>
-            <td>7️⃣ <a href="https://adventofcode.com/2023/day/7">Camel Cards</a></td>
-            <td><a href="lib/puzzles/2023/day07"><code>lib/puzzles/2023/day07</code></a></td>
-            <td>🌟🌟</td>
+      <tr>
+        <td>7️⃣ <a href="https://adventofcode.com/2023/day/7">Camel Cards</a></td>
+        <td><a href="lib/puzzles/2023/day07"><code>lib/puzzles/2023/day07</code></a></td>
+        <td>🌟🌟</td>
+      </tr>
+      <tr>
+        <td>8️⃣ <a href="https://adventofcode.com/2023/day/8">Haunted Wasteland</a></td>
+        <td><a href="lib/puzzles/2023/day08"><code>lib/puzzles/2023/day08</code></a></td>
+        <td>🌟🌟</td>
+      </tr>
     </table>
   </p>
 </details>
