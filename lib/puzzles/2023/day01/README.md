@@ -50,3 +50,5 @@ In this example, the calibration values are `29`, `83`, `13`, `24`, `42`, `14`, 
 **What is the sum of all of the calibration values?**
 
 Your puzzle answer was `54265`.
+
+**Both parts of this puzzle are complete! They provide two gold stars:** 🌟🌟

@@ -67,3 +67,5 @@ In this schematic, there are **two** gears. The first is in the top left; it has
 **What is the sum of all of the gear ratios in your engine schematic?**
 
 Your puzzle answer was `79842967`.
+
+**Both parts of this puzzle are complete! They provide two gold stars:** 🌟🌟
