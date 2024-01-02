@@ -2,8 +2,8 @@ module AdventOfCode
   module Puzzles2023
     module Day01
       class Part1
-        attr_reader file_contents: [String]
-        attr_reader calibration_values: [Integer]
+        attr_reader file_contents: Array[String]
+        attr_reader calibration_values: Array[Integer]
 
         def answer: () -> Integer
 
@@ -15,7 +15,7 @@ module AdventOfCode
       end
 
       class Part2 < Part1
-        TRANSLATIONS: { String: Integer }
+        TRANSLATIONS: Hash[String, Integer]
 
         def translate_contents: () -> void
 

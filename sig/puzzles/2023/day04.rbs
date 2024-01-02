@@ -3,25 +3,25 @@ module AdventOfCode
     module Day04
       class Card
         attr_reader id: Integer
-        attr_reader owned: [Integer]
-        attr_reader winning: [Integer]
-        attr_reader matches: [Integer]
+        attr_reader owned: Array[Integer]
+        attr_reader winning: Array[Integer]
+        attr_reader matches: Array[Integer]
       end
 
       class Part1
-        attr_reader cards: [Card]
+        attr_reader cards: Array[Card]
 
         def answer: () -> Integer
 
-        def parse_cards: ([String]) -> void
+        def parse_cards: (Array[String]) -> void
 
-        def points: () -> [Integer]
+        def points: () -> Array[Integer]
       end
 
       class Part2 < Part1
-        def get_matching_cards: () -> [Card]
+        def get_matching_cards: () -> Array[Card]
 
-        def total_cards: () -> [ { String: Card|Integer } ]
+        def total_cards: () -> Array[ Hash[ Symbol, Card|Integer ] ]
       end
     end
   end

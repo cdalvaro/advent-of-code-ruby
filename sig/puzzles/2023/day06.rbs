@@ -7,19 +7,19 @@ module AdventOfCode
       end
 
       class Part1
-        attr_reader races: [Race]
+        attr_reader races: Array[Race]
 
         def answer: () -> Integer
 
-        def find_time_ranges: () -> [Range[Integer]]
+        def find_time_ranges: () -> Array[Range[Integer]]
 
         def parse_file: (String) -> void
 
-        def parse_values: ([String], String) -> [Integer]
+        def parse_values: (Array[String], String) -> Array[Integer]
 
         def find_time_range: (Race) -> Range[Integer]
 
-        def find_race_distance_times: (Race) -> [Float]
+        def find_race_distance_times: (Race) -> Array[Float]
 
         def valid_time?: (Integer) -> bool
       end

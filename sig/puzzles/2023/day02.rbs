@@ -10,7 +10,7 @@ module AdventOfCode
 
       class Game
         attr_reader id: Integer
-        attr_reader sets: [Set]
+        attr_reader sets: Array[Set]
 
         def valid?: (Integer, Integer, Integer) -> bool
       end
@@ -20,19 +20,19 @@ module AdventOfCode
 
         def answer: (Integer, Integer, Integer) -> Integer
 
-        def load_games: ([String]) -> [Game]
+        def load_games: (Array[String]) -> [Game]
 
         def parse_game_id: (String) -> Integer
 
         def parse_set: (String) -> Set
 
-        def valid_games: (Integer, Integer, Integer) -> [Game]
+        def valid_games: (Integer, Integer, Integer) -> Array[Game]
       end
 
       class Part2 < Part1
-        COLORS: [Symbol]
+        COLORS: Array[Symbol]
 
-        attr_reader minimum_valid_sets: { Game: Set }
+        attr_reader minimum_valid_sets: Hash[Game, Set]
 
         def minimum_valid_set_for: (Game) -> Set
       end

@@ -16,36 +16,36 @@ module AdventOfCode
 
         def find_type: (String) -> [Integer, String]
 
-        def group_cards: (String) -> [Integer]
+        def group_cards: (String) -> Array[Integer]
       end
 
       class Hand
-        CARDS_HIERARCHY: [String]
+        CARDS_HIERARCHY: Array[String]
 
         attr_reader cards: String
         attr_reader bid: Integer
         attr_reader type: HandType
 
-        def cards_hierarchy: () -> [String]
+        def cards_hierarchy: () -> Array[String]
 
         def compare_cards: (String) -> Integer
       end
 
       class Part1
-        attr_reader hands: [Hand]
+        attr_reader hands: Array[Hand]
 
         def answer: () -> Integer
 
         def parse_file: (String) -> void
 
-        def sort_hands: () -> [Hand]
+        def sort_hands: () -> Array[Hand]
 
         def build_hand: (String, Integer) -> Hand
       end
 
       class Part2 < Part1
         class Hand < Day07::Hand
-          CARDS_HIERARCHY: [String]
+          CARDS_HIERARCHY: Array[String]
         end
       end
     end
