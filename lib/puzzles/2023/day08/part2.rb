@@ -33,7 +33,7 @@ module AdventOfCode
         #
         # @return [Array<Array<Symbol>>] path
         def find_path
-          raise NotImplementedError "To heavy to calculate"
+          raise NotImplementedError, "To heavy to calculate"
         end
 
         protected
