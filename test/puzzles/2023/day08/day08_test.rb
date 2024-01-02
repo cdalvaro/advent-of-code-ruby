@@ -59,6 +59,15 @@ module AdventOfCode
             # Do nothing
           end
 
+          def test_find_path
+            input_file = "#{File.dirname(__FILE__)}/test_data_set3.txt"
+            puzzle = AdventOfCode::Puzzles2023::Day08::Part2.new(file: input_file)
+
+            assert_raises NotImplementedError do
+              puzzle.find_path
+            end
+          end
+
           def test_answer_test_data_set
             input_file = "#{File.dirname(__FILE__)}/test_data_set3.txt"
             puzzle = AdventOfCode::Puzzles2023::Day08::Part2.new(file: input_file)
