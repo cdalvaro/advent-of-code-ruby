@@ -72,6 +72,11 @@ SKIP_SLOW_TESTS=1 bundle exec rake test
         <td><a href="lib/puzzles/2023/day08"><code>lib/puzzles/2023/day08</code></a></td>
         <td>🌟🌟</td>
       </tr>
+      <tr>
+        <td>9️⃣ <a href="https://adventofcode.com/2023/day/9">Mirage Maintenance</a></td>
+        <td><a href="lib/puzzles/2023/day09"><code>lib/puzzles/2023/day09</code></a></td>
+        <td>🌟🌟</td>
+      </tr>
     </table>
   </p>
 </details>
