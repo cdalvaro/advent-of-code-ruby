@@ -1,0 +1,40 @@
+module AdventOfCode
+  module Puzzles2023
+    module Day09
+      class OASIS
+        class Feature
+          attr_reader values: Array[Integer]
+          attr_accessor predicted_value: Integer?
+
+          def initialize: (Array[Integer]) -> void
+        end
+
+        attr_reader report: Array[Feature]
+
+        def initialize: (String) -> void
+
+        def parse_file: (String) -> void
+      end
+
+      class Part1
+        attr_reader oasis: OASIS
+
+        def initialize: (String) -> void
+
+        def answer: -> Integer
+
+        def predict_all_features: () -> void
+
+        def predict: (OASIS::Feature) -> Integer
+
+        def compute_differences: (OASIS::Feature) -> Array[Array[Integer]]
+
+        def row_differences: (Array[Integer]) -> Array[Integer]
+      end
+
+      class Part2 < Part1
+
+      end
+    end
+  end
+end
