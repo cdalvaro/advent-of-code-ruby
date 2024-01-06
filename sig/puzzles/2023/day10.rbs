@@ -1,0 +1,55 @@
+module AdventOfCode
+  module Puzzles2023
+    module Day10
+      class Pipe
+        CONNECTIONS: Hash[Symbol, Hash[Symbol, Array[Symbol]]]
+
+        attr_reader sym: Symbol
+        attr_reader pos: Array[Integer]
+
+        def initialize: (Symbol, Array[Integer]) -> void
+
+        def can_connect?: (Pipe, Symbol) -> bool
+      end
+
+      class Movement
+        GO_UP: Movement
+        GO_DOWN: Movement
+        GO_RIGHT: Movement
+        GO_LEFT: Movement
+
+        attr_reader movement: Array[Integer]
+
+        def initialize: (Array[Integer]) -> void
+
+        def apply: (Array[Integer]) -> Array[Integer]
+      end
+
+      class Part1
+        attr_reader data: Array[Array[Symbol]]
+
+        def initialize: (String) -> void
+
+        def answer: -> Integer
+
+        def parse_file: (String) -> void
+
+        def find_starting_pipe: () -> Pipe
+
+        def replace_s_with_real_pipe: (Pipe) -> Pipe
+
+        def find_path: () -> Array[Pipe]
+
+        def next_pipe: (Pipe, Symbol) -> Pipe?
+
+        def valid_pos?: (Array[Integer]) -> bool
+
+        def find_next_pipe: (Pipe, Pipe) -> Pipe
+      end
+
+      class Part2 < Part1
+
+      end
+    end
+  end
+end
