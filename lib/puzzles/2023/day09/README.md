@@ -92,6 +92,8 @@ Analyze your OASIS report and extrapolate the next value for each history. **Wha
 
 Your puzzle answer was `1762065988`.
 
+**The first half of this puzzle is complete! It provides one gold star:** 🌟 
+
 ## Part Two
 
 Of course, it would be nice to have **even more history** included in your report. Surely it's safe to just **extrapolate backwards** as well, right?

@@ -50,6 +50,8 @@ Determine the number of ways you could beat the record in each race. **What do y
 
 Your puzzle answer was `2756160`.
 
+**The first half of this puzzle is complete! It provides one gold star:** 🌟 
+
 ## Part Two
 
 As the race is about to start, you realize the piece of paper with race times and record distances you got earlier actually just has very bad [kerning](https://en.wikipedia.org/wiki/Kerning). There's really **only one race** - ignore the spaces between the numbers on each line.

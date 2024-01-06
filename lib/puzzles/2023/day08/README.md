@@ -36,9 +36,11 @@ BBB = (AAA, ZZZ)
 ZZZ = (ZZZ, ZZZ)
 ```
 
-Starting at `AAA`, follow the left/right instructions. **How many steps are required to reach ZZZ?**
+Starting at `AAA`, follow the left/right instructions. **How many steps are required to reach `ZZZ`?**
 
 Your puzzle answer was `19199`.
+
+**The first half of this puzzle is complete! It provides one gold star:** 🌟 
 
 ## Part Two
 

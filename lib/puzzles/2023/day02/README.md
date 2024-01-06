@@ -32,6 +32,8 @@ Determine which games would have been possible if the bag had been loaded with o
 
 Your puzzle answer was `2278`.
 
+**The first half of this puzzle is complete! It provides one gold star:** 🌟 
+
 ## Part Two
 
 The Elf says they've stopped producing snow because they aren't getting any **water**! He isn't sure why the water stopped; however, he can show you how to get to the water source to check it out for yourself. It's just up ahead!
