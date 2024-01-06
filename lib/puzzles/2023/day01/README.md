@@ -29,6 +29,8 @@ Consider your entire calibration document. **What is the sum of all of the calib
 
 Your puzzle answer was `54450`.
 
+**The first half of this puzzle is complete! It provides one gold star:** 🌟 
+
 ## Part Two
 
 Your calculation isn't quite right. It looks like some of the digits are actually **spelled out with letters**: `one`, `two`, `three`, `four`, `five`, `six`, `seven`, `eight`, and `nine` **also** count as valid "digits".

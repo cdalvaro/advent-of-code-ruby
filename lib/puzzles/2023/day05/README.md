@@ -109,6 +109,8 @@ So, the lowest location number in this example is **`35`**.
 
 Your puzzle answer was `318728750`.
 
+**The first half of this puzzle is complete! It provides one gold star:** 🌟 
+
 ## Part Two
 
 Everyone will starve if you only plant such a small number of seeds. Re-reading the almanac, it looks like the `seeds:` line actually describes **ranges of seed numbers**.

@@ -41,6 +41,8 @@ Take a seat in the large pile of colorful cards. **How many points are they wort
 
 Your puzzle answer was `22897`.
 
+**The first half of this puzzle is complete! It provides one gold star:** 🌟 
+
 ## Part Two
 
 Just as you're about to report your findings to the Elf, one of you realizes that the rules have actually been printed on the back of every card this whole time.
