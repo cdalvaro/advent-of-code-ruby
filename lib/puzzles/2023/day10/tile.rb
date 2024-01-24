@@ -4,54 +4,58 @@ module AdventOfCode
   module Puzzles2023
     module Day10
       ##
-      # Class for representing a pipe.
-      class Pipe
+      # Class for representing a tile.
+      class Tile
         ##
-        # The symbol of the pipe.
-        # @return [Symbol] the symbol of the pipe
+        # The symbol of the tile.
+        # @return [Symbol] the symbol of the tile
         attr_reader :sym
 
         ##
-        # The position of the pipe.
-        # @return [Array<Integer>] the position of the pipe
+        # The position of the tile.
+        # @return [Array<Integer>] the position of the tile
         attr_reader :pos
 
         ##
-        # @param sym [Symbol] The symbol of the pipe
-        # @param pos [Array<Integer>] The position of the pipe
+        # @param sym [Symbol] The symbol of the tile
+        # @param pos [Array<Integer>] The position of the tile
         def initialize(sym:, pos:)
           @sym = sym
           @pos = pos
         end
 
         ##
-        # Check if the pipe can connect to another pipe in the direction given direction
+        # Check if the tile can connect to another tile in the direction given direction
         #
-        # @param to [Pipe] The pipe to connect to
+        # @param to [Tile] The tile to connect to
         # @param direction [Symbol] The direction to connect to
         #
-        # @return [Boolean] True if the pipe can connect to the other pipe in the given direction
+        # @return [Boolean] True if the tile can connect to the other tile in the given direction
         def can_connect?(to:, direction:)
           connections = CONNECTIONS[sym]
           return false unless connections
           return true if connections[direction]&.include?(to.sym)
 
-          to.sym == :S
+          connections.key?(direction) && to.sym == :S
         end
 
         ##
-        # Check whether two pipes are the same
+        # Check whether two tiles are the same
         #
-        # @param other [Pipe] The other pipe to compare to
+        # @param other [Tile] The other tile to compare to
         #
-        # @return [Boolean] True if the pipes are the same
+        # @return [Boolean] True if the tiles are the same
         def ==(other)
           pos == other.pos
         end
 
+        def to_s
+          "#{sym} #{pos}"
+        end
+
         ##
-        # Hash with all possible connections for each pipe
-        # @return [Hash<Symbol, Hash<Symbol, Array<Symbol>>>] Hash with all possible connections for each pipe
+        # Hash with all possible connections for each tile
+        # @return [Hash<Symbol, Hash<Symbol, Array<Symbol>>>] Hash with all possible connections for each tile
         CONNECTIONS = {
           :| => { up: %i[7 | F], down: %i[J | L] },
           :- => { left: %i[L - F], right: %i[J - 7] },

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "movement"
-require_relative "pipe"
+require_relative "tile"
 
 module AdventOfCode
   module Puzzles2023
@@ -17,9 +17,9 @@ module AdventOfCode
         end
 
         ##
-        # Get the number of steps to the furthest pipe.
+        # Get the number of steps to the furthest tile.
         #
-        # @return [Integer] The number of steps to the furthest pipe
+        # @return [Integer] The number of steps to the furthest tile
         def answer
           total_steps = find_path.length
           if (total_steps % 2).zero?
@@ -32,22 +32,22 @@ module AdventOfCode
         protected
 
         ##
-        # A sketch of all of the surface pipes.
-        # @return [Array<Array<Symbol>>] A sketch of all of the surface pipes
+        # A sketch of all of the surface tiles.
+        # @return [Array<Array<Symbol>>] A sketch of all of the surface tiles
         attr_reader :data
 
         ##
         # Parse the input file.
         # @param file [String] The input file
         def parse_file(file)
-          @data = File.readlines(file).map { |line| line.chars.map(&:to_sym) }
+          @data = File.readlines(file).map { |line| line.chomp.chars.map(&:to_sym) }
         end
 
         ##
-        # Find the pipe with the :S symbol, and replace it with the real pipe.
+        # Find the tile with the :S symbol, and replace it with the real tile.
         #
-        # @return [Pipe] The real pipe
-        def find_starting_pipe
+        # @return [Tile] The real tile
+        def find_starting_tile
           row = column = nil
           data.each_with_index do |line, row_index|
             line.each_with_index do |char, column_index|
@@ -60,59 +60,59 @@ module AdventOfCode
             break if row && column
           end
 
-          replace_s_with_real_pipe(s_pipe: Pipe.new(sym: :S, pos: [row, column]))
+          replace_s_with_real_tile(s_tile: Tile.new(sym: :S, pos: [row, column]))
         end
 
         ##
-        # Replace the :S pipe with the real pipe.
+        # Replace the :S tile with the real tile.
         #
-        # @param s_pipe [Pipe] The :S pipe
+        # @param s_tile [Tile] The :S tile
         #
-        # @return [Pipe] The real pipe
-        def replace_s_with_real_pipe(s_pipe:)
+        # @return [Tile] The real tile
+        def replace_s_with_real_tile(s_tile:)
           # S neighbors
           directions = %i[up down left right]
-          neighbor_pipes = directions.to_h { |dir| [dir, next_pipe(from: s_pipe, direction: dir)] }
+          neighbor_tiles = directions.to_h { |dir| [dir, next_tile(from: s_tile, direction: dir)] }
                                      .compact
 
-          # Find pipes that connects with two neighbors
-          pipes = %w[| - L J 7 F].map { |sym| Pipe.new(sym: sym.to_sym, pos: s_pipe.pos) }
-          pipes.select! do |pipe|
-            connections = neighbor_pipes.filter { |direction, neighbour| pipe.can_connect?(to: neighbour, direction:) }
+          # Find tiles that connects with two neighbors
+          tiles = %w[| - L J 7 F].map { |sym| Tile.new(sym: sym.to_sym, pos: s_tile.pos) }
+          tiles.select! do |tile|
+            connections = neighbor_tiles.filter { |direction, neighbour| tile.can_connect?(to: neighbour, direction:) }
             connections.size == 2
           end
 
-          pipes[0]
+          tiles[0]
         end
 
         ##
         # Find the closed path.
         #
-        # @return [Array<Pipe>] The closed path
+        # @return [Array<Tile>] The closed path
         def find_path
           path = []
-          pipe = find_starting_pipe
-          path << pipe
-          previous = pipe
+          tile = find_starting_tile
+          path << tile
+          previous = tile
           loop do
-            new_pipe = find_next_pipe(from: pipe, previous:)
-            break if new_pipe.sym == :S
+            new_tile = find_next_tile(from: tile, previous:)
+            break if new_tile.sym == :S
 
-            path << new_pipe
-            previous = pipe
-            pipe = new_pipe
+            path << new_tile
+            previous = tile
+            tile = new_tile
           end
           path
         end
 
         ##
-        # Get the next pipe from the given pipe in the given direction.
+        # Get the next tile from the given tile in the given direction.
         #
-        # @param from [Pipe] The pipe to start from
+        # @param from [Tile] The tile to start from
         # @param direction [Symbol] The direction to go
         #
-        # @return [Pipe] The next pipe
-        def next_pipe(from:, direction:)
+        # @return [Tile] The next tile
+        def next_tile(from:, direction:)
           movement = case direction
                      when :up
                        Movement::GO_UP
@@ -128,10 +128,10 @@ module AdventOfCode
           return unless valid_pos?(pos)
 
           sym = data[pos[0]][pos[1]]
-          pipe = Pipe.new(sym:, pos:)
-          return unless from.can_connect?(to: pipe, direction:)
+          tile = Tile.new(sym:, pos:)
+          return unless from.can_connect?(to: tile, direction:)
 
-          pipe
+          tile
         end
 
         ##
@@ -148,33 +148,33 @@ module AdventOfCode
         end
 
         ##
-        # Find the next pipe that connects to the current pipe.
+        # Find the next tile that connects to the current tile.
         #
-        # @param from [Pipe] The current pipe
-        # @param previous [Pipe] The previous pipe (to avoid going back)
+        # @param from [Tile] The current tile
+        # @param previous [Tile] The previous tile (to avoid going back)
         #
-        # @return [Pipe] The next pipe
-        def find_next_pipe(from:, previous:) # rubocop:disable Metrics/CyclomaticComplexity
+        # @return [Tile] The next tile
+        def find_next_tile(from:, previous:) # rubocop:disable Metrics/CyclomaticComplexity
           # Can go up?
-          if (new_pipe = next_pipe(from:, direction: :up)) && new_pipe != previous
-            return new_pipe
+          if (new_tile = next_tile(from:, direction: :up)) && new_tile != previous
+            return new_tile
           end
 
           # Can go right?
-          if (new_pipe = next_pipe(from:, direction: :right)) && new_pipe != previous
-            return new_pipe
+          if (new_tile = next_tile(from:, direction: :right)) && new_tile != previous
+            return new_tile
           end
 
           # Can go down?
-          if (new_pipe = next_pipe(from:, direction: :down)) && new_pipe != previous
-            return new_pipe
+          if (new_tile = next_tile(from:, direction: :down)) && new_tile != previous
+            return new_tile
           end
 
           # Must be left
-          new_pipe = next_pipe(from:, direction: :left)
-          raise "No pipe found" unless new_pipe
+          new_tile = next_tile(from:, direction: :left)
+          raise "No tile found" unless new_tile
 
-          new_pipe
+          new_tile
         end
       end
     end
