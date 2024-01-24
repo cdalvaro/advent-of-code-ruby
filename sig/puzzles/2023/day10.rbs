@@ -1,7 +1,7 @@
 module AdventOfCode
   module Puzzles2023
     module Day10
-      class Pipe
+      class Tile
         CONNECTIONS: Hash[Symbol, Hash[Symbol, Array[Symbol]]]
 
         attr_reader sym: Symbol
@@ -9,7 +9,7 @@ module AdventOfCode
 
         def initialize: (Symbol, Array[Integer]) -> void
 
-        def can_connect?: (Pipe, Symbol) -> bool
+        def can_connect?: (Tile, Symbol) -> bool
       end
 
       class Movement
@@ -34,21 +34,35 @@ module AdventOfCode
 
         def parse_file: (String) -> void
 
-        def find_starting_pipe: () -> Pipe
+        def find_starting_tile: () -> Tile
 
-        def replace_s_with_real_pipe: (Pipe) -> Pipe
+        def replace_s_with_real_tile: (Tile) -> Tile
 
-        def find_path: () -> Array[Pipe]
+        def find_path: () -> Array[Tile]
 
-        def next_pipe: (Pipe, Symbol) -> Pipe?
+        def next_tile: (Tile, Symbol) -> Tile?
 
         def valid_pos?: (Array[Integer]) -> bool
 
-        def find_next_pipe: (Pipe, Pipe) -> Pipe
+        def find_next_tile: (Tile, Tile) -> Tile
       end
 
       class Part2 < Part1
+        NO_CHANGE_STATE_COMBINATIONS: Set[Symbol]
+        OPEN_PATH_COMBINATIONS: Set[Symbol]
+        CLOSE_PATH_COMBINATIONS: Set[Symbol]
 
+        attr_reader path: Array[Tile]
+
+        def count_inner_tiles: -> Integer
+
+        def tile_is_inside?: (Tile, bool?, Symbol?) -> Array[bool | Symbol]
+
+        def state_has_changed?: (Tile, Symbol?) -> Array[bool | Symbol?]
+
+        def check_combination: (Symbol, Symbol?) -> Array[bool | Symbol?]
+
+        def previous_tile: (Tile) -> Tile
       end
     end
   end
