@@ -80,7 +80,7 @@ SKIP_SLOW_TESTS=1 bundle exec rake test
       <tr>
         <td>1️⃣0️⃣ <a href="https://adventofcode.com/2023/day/10">The Great Escape</a></td>
         <td><a href="lib/puzzles/2023/day10"><code>lib/puzzles/2023/day10</code></a></td>
-        <td>🌟</td>
+        <td>🌟🌟</td>
       </tr>
     </table>
   </p>
