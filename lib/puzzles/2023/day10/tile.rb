@@ -49,10 +49,6 @@ module AdventOfCode
           pos == other.pos
         end
 
-        def to_s
-          "#{sym} #{pos}"
-        end
-
         ##
         # Hash with all possible connections for each tile
         # @return [Hash<Symbol, Hash<Symbol, Array<Symbol>>>] Hash with all possible connections for each tile

@@ -63,6 +63,8 @@ module AdventOfCode
         def check_combination: (Symbol, Symbol?) -> Array[bool | Symbol?]
 
         def previous_tile: (Tile) -> Tile
+
+        def execute_block_with_real_starting_tile: () { () -> untyped } -> untyped
       end
     end
   end
