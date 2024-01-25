@@ -9,23 +9,20 @@ module AdventOfCode
       # Class for solving Day 10 - Part 2 puzzle
       class Part2 < Part1
         ##
+        # @param file [String] The input file
+        def initialize(file: nil)
+          super
+          @path = find_path
+        end
+
+        ##
         # Get the number of inner tiles inside the path.
         #
         # @return [Integer] The number of inner tiles inside the path
         def answer
-          @path = find_path
-
-          # Replace :S with the real tile
-          starting_tile = find_starting_tile
-          data[starting_tile.pos[0]][starting_tile.pos[1]] = starting_tile.sym
-
-          # Count inner tiles
-          inner_tiles = count_inner_tiles
-
-          # Restore :S
-          data[starting_tile.pos[0]][starting_tile.pos[1]] = :S
-
-          inner_tiles
+          execute_block_with_real_starting_tile do
+            count_inner_tiles
+          end
         end
 
         protected
@@ -143,6 +140,22 @@ module AdventOfCode
         def previous_tile(tile:)
           previous_pos = Movement::GO_LEFT.apply(to: tile.pos)
           Tile.new(sym: data[previous_pos[0]][previous_pos[1]], pos: previous_pos)
+        end
+
+        ##
+        # Execute the given block after replacing the starting tile with the real one.
+        # Once the block is executed, the starting tile is restored.
+        #
+        # @return [Untyped] The result of the block
+        def execute_block_with_real_starting_tile
+          starting_tile = find_starting_tile
+          row, column = starting_tile.pos[0..1]
+
+          data[row][column] = starting_tile.sym
+          result = yield
+        ensure
+          data[row][column] = :S
+          result
         end
       end
     end

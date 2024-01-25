@@ -21,12 +21,7 @@ module AdventOfCode
         #
         # @return [Integer] The number of steps to the furthest tile
         def answer
-          total_steps = find_path.length
-          if (total_steps % 2).zero?
-            total_steps / 2
-          else
-            (total_steps / 2).floor + 1
-          end
+          find_path.length / 2
         end
 
         protected
