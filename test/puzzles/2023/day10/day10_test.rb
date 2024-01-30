@@ -91,6 +91,8 @@ module AdventOfCode
           end
 
           def test_answer_input_set
+            skip "Takes too long to run" if ENV["SKIP_SLOW_TESTS"]
+
             puzzle = AdventOfCode::Puzzles2023::Day10::Part2.new
 
             assert_equal 407, puzzle.answer
