@@ -1,0 +1,39 @@
+module AdventOfCode
+  module Puzzles2023
+    module Day11
+      type galaxy = Array[Integer]
+      type data = Array[Array[Symbol]]
+      type pairs = Array[galaxy]
+      type positions = Array[galaxy]
+
+      class Part1
+        GALAXY_SYMBOL: Symbol
+
+        attr_reader space: data
+
+        def answer: -> Integer
+
+        def parse_file: (String) -> void
+
+        def expand_empty_space: (data) -> data
+
+        def expand_space: (data) -> data
+
+        def find_galaxies: -> positions
+
+        def make_pairs: (Integer) -> pairs
+
+        def get_distances: (pairs, positions) -> Array[Integer]
+
+        def get_distance: (galaxy, galaxy) -> Integer
+      end
+
+      class Part2 < Part1
+        attr_reader expansion_rate: Integer
+        attr_reader expanded_regions: Hash[Symbol, Set[Integer]]
+
+        def get_1d_distance: (galaxy, galaxy, Symbol) -> Integer
+      end
+    end
+  end
+end

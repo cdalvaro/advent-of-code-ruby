@@ -82,6 +82,11 @@ SKIP_SLOW_TESTS=1 bundle exec rake test
         <td><a href="lib/puzzles/2023/day10"><code>lib/puzzles/2023/day10</code></a></td>
         <td>🌟🌟</td>
       </tr>
+      <tr>
+        <td>1️⃣1️⃣ <a href="https://adventofcode.com/2023/day/11">Cosmic Expansion</a></td>
+        <td><a href="lib/puzzles/2023/day11"><code>lib/puzzles/2023/day11</code></a></td>
+        <td>🌟🌟</td>
+      </tr>
     </table>
   </p>
 </details>
