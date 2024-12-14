@@ -1,0 +1,24 @@
+module AdventOfCode
+  module Puzzles2024
+    module Day01
+      class Part1
+        attr_reader list_a: Array[Integer]
+        attr_reader list_b: Array[Integer]
+
+        @distances: Array[Integer]
+
+        def initialize: (file: String?) -> void
+
+        def answer: () -> Integer
+        def distances: () -> Array[Integer]
+        def init_lists: (Array[String]) -> void
+      end
+
+      class Part2 < Part1
+        @similarity_scores: Array[Integer]
+
+        def similarity_scores: () -> Array[Integer]
+      end
+    end
+  end
+end

@@ -1,0 +1,19 @@
+module AdventOfCode
+  module Test
+    module Puzzles2024
+      module Day01
+        class Part1Test < MiniTest::Test
+          def test_answer_real_set: -> untyped
+          def test_answer_test_set: -> untyped
+          def test_distances_test_set: -> untyped
+        end
+
+        class Part2Test < MiniTest::Test
+          def test_answer_real_set: -> untyped
+          def test_answer_test_set: -> untyped
+          def test_similarity_scores_test_set: -> untyped
+        end
+      end
+    end
+  end
+end
