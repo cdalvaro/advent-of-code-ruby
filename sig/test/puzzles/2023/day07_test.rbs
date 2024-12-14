@@ -3,46 +3,24 @@ module AdventOfCode
     module Puzzles2023
       module Day07
         class HandTypeTest < MiniTest::Test
-          def setup: -> untyped
-
-          def teardown: -> untyped
-
           def test_find_type_five_of_a_kind: -> untyped
-
           def test_find_type_four_of_a_kind: -> untyped
-
           def test_find_type_full_house: -> untyped
-
           def test_find_type_three_of_a_kind: -> untyped
-
           def test_find_type_two_pairs: -> untyped
-
           def test_find_type_one_pair: -> untyped
-
           def test_find_type_high_card: -> untyped
         end
 
         class Part1Test < MiniTest::Test
-          def setup: -> untyped
-
-          def teardown: -> untyped
-
           def test_sort_hands_test_data_set: -> untyped
-
           def test_answer_test_data_set: -> untyped
-
           def test_answer_input_set: -> untyped
         end
 
         class Part2Test < MiniTest::Test
-          def setup: -> untyped
-
-          def teardown: -> untyped
-
           def test_sort_hands_test_data_set: -> untyped
-
           def test_answer_test_data_set: -> untyped
-
           def test_answer_input_set: -> untyped
         end
       end

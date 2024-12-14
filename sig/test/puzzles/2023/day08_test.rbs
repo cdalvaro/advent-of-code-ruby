@@ -3,26 +3,14 @@ module AdventOfCode
     module Puzzles2023
       module Day08
         class Part1Test < MiniTest::Test
-          def setup: -> untyped
-
-          def teardown: -> untyped
-
           def test_find_path: -> untyped
-
           def test_answer_test_data_set: -> untyped
-
           def test_answer_input_set: -> untyped
         end
 
         class Part2Test < MiniTest::Test
-          def setup: -> untyped
-
-          def teardown: -> untyped
-
           def test_find_path: -> untyped
-
           def test_answer_test_data_set: -> untyped
-
           def test_answer_input_set: -> untyped
         end
       end

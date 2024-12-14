@@ -3,45 +3,26 @@ module AdventOfCode
     module Puzzles2023
       module Day05
         class ConverterTest < MiniTest::Test
-          attr_reader converter: Puzzles2023::Day05::Converter
-
-          def setup: -> untyped
-
-          def teardown: -> untyped
+          attr_reader converter: AdventOfCode::Puzzles2023::Day05::Converter
 
           def test_conversion: -> untyped
         end
 
         class AlmanacTest < MiniTest::Test
-          attr_reader almanac: Puzzles2023::Day05::Almanac
+          attr_reader almanac: AdventOfCode::Puzzles2023::Day05::Almanac
           attr_reader file: String
 
-          def setup: -> untyped
-
-          def teardown: -> untyped
-
           def test_seeds_conversion_no_reverse: -> untyped
-
           def test_seeds_conversion_reverse: -> untyped
         end
 
         class Part1Test < MiniTest::Test
-          def setup: -> untyped
-
-          def teardown: -> untyped
-
           def test_answer_test_data_set: -> untyped
-
           def test_answer_input_set: -> untyped
         end
 
         class Part2Test < MiniTest::Test
-          def setup: -> untyped
-
-          def teardown: -> untyped
-
           def test_answer_test_data_set: -> untyped
-
           def test_answer_input_set: -> untyped
         end
       end

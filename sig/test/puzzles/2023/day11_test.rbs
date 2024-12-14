@@ -3,28 +3,15 @@ module AdventOfCode
     module Puzzles2023
       module Day11
         class Part1Test < MiniTest::Test
-          def setup: -> untyped
-
-          def teardown: -> untyped
-
           def test_answer_test_data_set: -> untyped
-
           def test_answer_input_set: -> untyped
         end
 
         class Part2Test < MiniTest::Test
-          def setup: -> untyped
-
-          def teardown: -> untyped
-
           def test_answer_test_data_set_expansion_rate2: -> untyped
-
           def test_answer_test_data_set_expansion_rate10: -> untyped
-
           def test_answer_test_data_set_expansion_rate100: -> untyped
-
           def test_answer_test_data_set_default_expansion_rate: -> untyped
-
           def test_answer_input_set: -> untyped
         end
       end

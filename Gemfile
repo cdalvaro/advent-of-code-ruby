@@ -22,4 +22,7 @@ group :development do
 
   # Type Signature for Ruby
   gem "rbs", "~> 3.0"
+
+  # Steep
+  gem "steep"
 end

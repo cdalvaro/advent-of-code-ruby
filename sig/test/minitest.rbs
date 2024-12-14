@@ -1,0 +1,7 @@
+module MiniTest
+  class Test
+    def setup: -> untyped
+    def teardown: -> untyped
+    def assert_equal: (untyped, untyped) -> untyped
+  end
+end

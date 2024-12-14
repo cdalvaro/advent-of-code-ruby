@@ -3,38 +3,20 @@ module AdventOfCode
     module Puzzles2023
       module Day10
         class Part1Test < MiniTest::Test
-          def setup: -> untyped
-
-          def teardown: -> untyped
-
           def test_answer_test_data_set1: -> untyped
-
           def test_answer_test_data_set2: -> untyped
-
           def test_answer_test_data_set3: -> untyped
-
           def test_answer_test_data_set4: -> untyped
-
           def test_answer_test_data_set5: -> untyped
-
           def test_answer_input_set: -> untyped
         end
 
         class Part2Test < MiniTest::Test
-          def setup: -> untyped
-
-          def teardown: -> untyped
-
           def test_answer_test_data_set1: -> untyped
-
           def test_answer_test_data_set2: -> untyped
-
           def test_answer_test_data_set3: -> untyped
-
           def test_answer_test_data_set4: -> untyped
-
           def test_answer_test_data_set5: -> untyped
-
           def test_answer_input_set: -> untyped
         end
       end
