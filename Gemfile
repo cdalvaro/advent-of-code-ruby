@@ -25,4 +25,7 @@ group :development do
 
   # Steep
   gem "steep"
+
+  # Overcommit
+  gem "overcommit"
 end
