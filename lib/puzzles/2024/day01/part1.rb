@@ -4,7 +4,7 @@ module AdventOfCode
   module Puzzles2024
     module Day01
       ##
-      # Class for solving Day 1 - Part 1 puzzle
+      # Class for solving Day 1 (2024) - Part 1 puzzle
       class Part1
         ##
         # @param file [String|nil] file with puzzle input
