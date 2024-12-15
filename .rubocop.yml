@@ -10,8 +10,14 @@ AllCops:
 Layout/LineLength:
   Max: 120
 
+Metrics/AbcSize:
+  Max: 25
+
 Metrics/MethodLength:
   Max: 30
+
+Minitest/MultipleAssertions:
+  Max: 5
 
 Style/GlobalVars:
   Enabled: false
