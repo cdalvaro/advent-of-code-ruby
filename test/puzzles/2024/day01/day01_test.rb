@@ -8,7 +8,7 @@ module AdventOfCode
     module Puzzles2024
       module Day01
         ##
-        # Tests Day 1 - Part 1
+        # Tests Day 1 (2024) - Part 1
         class Part1Test < Minitest::Test
           def setup
             # Do nothing
@@ -40,7 +40,7 @@ module AdventOfCode
         end
 
         ##
-        # Tests Day 1 - Part 2
+        # Tests Day 1 (2024) - Part 2
         class Part2Test < Minitest::Test
           def setup
             # Do nothing

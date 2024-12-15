@@ -1,0 +1,28 @@
+module AdventOfCode
+  module Puzzles2024
+    module Day02
+      class Report
+        attr_reader levels: Array[Integer]
+        attr_reader tolerance: Integer
+
+        def initialize: (file: String?, tolerance: Integer) -> void
+        def safe?: () -> bool
+        def dup: () -> Report
+        def delete_at: (Integer) -> Integer
+        def positive_trend?: () -> bool
+      end
+
+      class Part1
+        attr_reader reports: Array[Report]
+
+        def initialize: (file: String?) -> void
+
+        def answer: () -> Integer
+        def init_reports: (Array[String]) -> void
+      end
+
+      class Part2 < Part1
+      end
+    end
+  end
+end

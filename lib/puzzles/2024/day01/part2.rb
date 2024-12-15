@@ -6,7 +6,7 @@ module AdventOfCode
   module Puzzles2024
     module Day01
       ##
-      # Class for solving Day 1 - Part 2 puzzle
+      # Class for solving Day 1 (2024) - Part 2 puzzle
       class Part2 < Part1
         ##
         # Compute the answer for the puzzle.

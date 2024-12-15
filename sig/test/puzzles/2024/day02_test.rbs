@@ -1,0 +1,24 @@
+module AdventOfCode
+  module Test
+    module Puzzles2024
+      module Day02
+        class ReportTest < MiniTest::Test
+          def test_tolerance0_safe_is_true: -> untyped
+          def test_tolerance0_safe_is_false: -> untyped
+          def test_tolerance1_safe_is_true: -> untyped
+          def test_tolerance1_safe_is_false: -> untyped
+        end
+
+        class Part1Test < MiniTest::Test
+          def test_answer_real_set: -> untyped
+          def test_answer_test_set: -> untyped
+        end
+
+        class Part2Test < MiniTest::Test
+          def test_answer_real_set: -> untyped
+          def test_answer_test_set: -> untyped
+        end
+      end
+    end
+  end
+end

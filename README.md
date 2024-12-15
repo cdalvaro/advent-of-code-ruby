@@ -37,6 +37,11 @@ SKIP_SLOW_TESTS=1 bundle exec rake test
       <td><a href="lib/puzzles/2024/day01"><code>lib/puzzles/2024/day01</code></a></td>
       <td>🌟🌟</td>
     </tr>
+    <tr>
+      <td>2️⃣ <a href="https://adventofcode.com/2024/day/2">Red-Nosed Reports</a></td>
+      <td><a href="lib/puzzles/2024/day02"><code>lib/puzzles/2024/day01</code></a></td>
+      <td>🌟🌟</td>
+    </tr>
   </table>
 </details>
 
