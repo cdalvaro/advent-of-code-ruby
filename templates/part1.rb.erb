@@ -1,0 +1,35 @@
+# frozen_string_literal: true
+
+module AdventOfCode
+  module Puzzles<%= year %>
+    module Day<%= day %>
+      ##
+      # Class for solving Day <%= day.to_i %> (<%= year %>) - Part 1 puzzle
+      class Part1
+        ##
+        # @param file [String|nil] file with puzzle input
+        def initialize(file: nil)
+          file ||= "#{File.dirname(__FILE__)}/input.txt"
+          init_contents File.readlines(file, chomp: true)
+        end
+
+        ##
+        # Compute the answer for the puzzle.
+        # <Add description here>
+        #
+        # @return [Integer] answer for the puzzle
+        def answer
+          raise NotImplementedError
+        end
+
+        protected
+
+        ##
+        # Initialize the class' contents from the file contents.
+        def init_contents(file_contents)
+          raise NotImplementedError
+        end
+      end
+    end
+  end
+end

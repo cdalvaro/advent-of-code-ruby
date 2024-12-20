@@ -1,0 +1,62 @@
+# frozen_string_literal: true
+
+require "test_helper"
+require "puzzles/<%= year %>/day<%= day %>/day<%= day %>"
+
+module AdventOfCode
+  module Test
+    module Puzzles<%= year %>
+      module Day<%= day %>
+        ##
+        # Tests Day <%= day.to_i %> (<%= year %>) - Part 1
+        class Part1Test < Minitest::Test
+          def setup
+            # Do nothing
+          end
+
+          def teardown
+            # Do nothing
+          end
+
+          def test_answer_test_set
+            input_file = "#{File.dirname(__FILE__)}/test_data.txt"
+            puzzle = AdventOfCode::Puzzles<%= year %>::Day<%= day %>::Part1.new(file: input_file)
+
+            assert_equal 0, puzzle.answer
+          end
+
+          def test_answer_real_set
+            puzzle = AdventOfCode::Puzzles<%= year %>::Day<%= day %>::Part1.new
+
+            assert_equal 0, puzzle.answer
+          end
+        end
+
+        ##
+        # Tests Day <%= day.to_i %> (<%= year %>) - Part 2
+        class Part2Test < Minitest::Test
+          def setup
+            # Do nothing
+          end
+
+          def teardown
+            # Do nothing
+          end
+
+          def test_answer_test_set
+            input_file = "#{File.dirname(__FILE__)}/test_data.txt"
+            puzzle = AdventOfCode::Puzzles<%= year %>::Day<%= day %>::Part2.new(file: input_file)
+
+            assert_equal 0, puzzle.answer
+          end
+
+          def test_answer_real_set
+            puzzle = AdventOfCode::Puzzles<%= year %>::Day<%= day %>::Part2.new
+
+            assert_equal 0, puzzle.answer
+          end
+        end
+      end
+    end
+  end
+end
