@@ -60,6 +60,7 @@ files_with_templates.each do |file, template_file|
   end
 
   print "  - Creating #{file.relative_path_from(ROOT_PATH)}..."
+  file.dirname.mkpath
   template = ERB.new((ROOT_PATH / template_file).read)
   file.write(template.result(binding))
   puts " done."
