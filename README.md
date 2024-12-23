@@ -5,10 +5,22 @@
 This repo contains my solutions to the [Advent of Code](https://adventofcode.com) challenges, written in
 the [Ruby](https://www.ruby-lang.org) programming language.
 
-The project is compose of two main parts:
+The project is structured as follows:
 
-- A library, located in the [`lib/`](lib/) directory, containing the code for the solutions.
-- A set of tests, located in the [`test/`](test/) directory, containing the tests for the solutions.
+- A script [`bin/create-files.rb`](bin/create-files.rb) to create the basic files for a new puzzle.
+- A library, located in the [`lib/`](lib) directory, containing the code for the solutions.
+- A set of tests, located in the [`test/`](test) directory, containing the tests for the solutions.
+- The [`sig`](sig) directory, which contains the signatures of the project.
+
+## Create Files
+
+When starting a new puzzle, you can use the script [`bin/create-files.rb`](bin/create-files.rb) to create the basic files for the puzzle.
+
+```bash
+bin/create-files.rb --day 25 [--year=2024] [--force]
+```
+
+## Run Tests
 
 Tests are written using the [minitest](https://github.com/minitest/minitest) framework.
 
@@ -16,10 +28,12 @@ To run the tests, simply run the following command:
 
 ```bash
 bundle install
-SKIP_SLOW_TESTS=1 bundle exec rake test
+bundle exec rake test
 ```
 
-## Puzzles
+Some tests are marked as slow, and they are skipped by default. To run them, you can set the environment variable `RUN_SLOW_TESTS` to `1`.
+
+## Solved Puzzles
 
 <a href="https://www.ruby-lang.org"><img src="https://s3.cdalvaro.io/github.com/cdalvaro/advent-of-code/Holly.png" width="230px" align="right"/></a>
 
@@ -39,7 +53,12 @@ SKIP_SLOW_TESTS=1 bundle exec rake test
     </tr>
     <tr>
       <td>2️⃣ <a href="https://adventofcode.com/2024/day/2">Red-Nosed Reports</a></td>
-      <td><a href="lib/puzzles/2024/day02"><code>lib/puzzles/2024/day01</code></a></td>
+      <td><a href="lib/puzzles/2024/day02"><code>lib/puzzles/2024/day02</code></a></td>
+      <td>🌟🌟</td>
+    </tr>
+    <tr>
+      <td>3️⃣ <a href="https://adventofcode.com/2024/day/3">Mull It Over</a></td>
+      <td><a href="lib/puzzles/2024/day03"><code>lib/puzzles/2024/day03</code></a></td>
       <td>🌟🌟</td>
     </tr>
   </table>
