@@ -91,7 +91,7 @@ module AdventOfCode
           end
 
           def test_answer_input_set
-            skip "Takes too long to run" if ENV["SKIP_SLOW_TESTS"]
+            skip "Takes too long to run" unless ENV.fetch("RUN_SLOW_TESTS", 0).to_i == 1
 
             puzzle = AdventOfCode::Puzzles2023::Day10::Part2.new
 

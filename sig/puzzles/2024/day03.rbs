@@ -1,0 +1,20 @@
+module AdventOfCode
+  module Puzzles2024
+    module Day03
+      class Part1
+        attr_reader memory: String
+
+        def initialize: (file: String?) -> void
+
+        def answer: () -> Integer
+        def init_contents: (Array[String]) -> void
+        def find_valid_ops: () -> Array[String]
+        def compute_ops: (Array[String]) -> Integer
+      end
+
+      class Part2 < Part1
+        def filter_ops: (Array[String]) -> Array[String]
+      end
+    end
+  end
+end

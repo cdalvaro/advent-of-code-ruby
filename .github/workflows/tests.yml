@@ -7,7 +7,7 @@ on:
   pull_request:
 
 env:
-  SKIP_SLOW_TESTS: true
+  RUN_SLOW_TESTS: 0
 
 jobs:
   test:
