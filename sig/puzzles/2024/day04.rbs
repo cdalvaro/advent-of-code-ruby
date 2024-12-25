@@ -1,0 +1,41 @@
+module AdventOfCode
+  module Puzzles2024
+    module Day04
+      class Pair[First, Second]
+        attr_reader first: First
+        attr_reader second: Second
+
+        def initialize: (First, Second) -> void
+        def to_s: () -> String
+      end
+
+      type indexes = Pair[Integer, Integer]
+      type movement = Pair[Array[Integer], Array[Integer]]
+
+      class Part1
+
+        attr_reader text: Array[String]
+        attr_reader height: Integer
+        attr_reader width: Integer
+
+        def initialize: (file: String?) -> void
+
+        def answer: () -> Integer
+        def init_contents: (Array[String]) -> void
+        def find_indexes_for: (pattern: Regexp::Expression | String) -> Array[indexes]
+        def number_of_xmas_words_for_pair: (indexes) -> Integer
+        def possible_movements: (indexes) -> Array[movement]
+        def check_bounds: (Array[Integer], Array[Integer]) -> bool
+        def compose_word: (Array[Integer], Array[Integer]) -> String
+        def horizontal_movements: (indexes) -> Array[movement]
+        def vertical_movements: (indexes) -> Array[movement]
+        def diagonal1_movements: (indexes) -> Array[movement]
+        def diagonal2_movements: (indexes) -> Array[movement]
+      end
+
+      class Part2 < Part1
+        def pair_is_mas_cross: (indexes) -> bool
+      end
+    end
+  end
+end
