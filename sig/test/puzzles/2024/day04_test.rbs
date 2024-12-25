@@ -2,6 +2,11 @@ module AdventOfCode
   module Test
     module Puzzles2024
       module Day04
+        class PairTest < MiniTest::Test
+          def test_accessors: -> untyped
+          def test_to_s: -> untyped
+        end
+
         class Part1Test < MiniTest::Test
           def test_part1_answer_real_set: -> untyped
           def test_part1_answer_test_set: -> untyped
