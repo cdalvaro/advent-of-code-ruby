@@ -53,7 +53,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
-    rbs (3.8.0)
+    rbs (3.8.1)
       logger
     regexp_parser (2.9.3)
     rexml (3.3.9)
@@ -124,7 +124,7 @@ DEPENDENCIES
   minitest-ci
   overcommit
   rake (~> 13.0)
-  rbs (~> 3.0)
+  rbs (~> 3.8)
   rubocop
   rubocop-minitest
   rubocop-performance
