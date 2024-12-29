@@ -1,0 +1,32 @@
+module AdventOfCode
+  module Puzzles2024
+    module Day05
+      type update = Array[Integer]
+
+      class UpdateManager
+        attr_reader rules: Hash[Integer, Array[Integer]]
+
+        def initialize: (Array[String], separator: String) -> void
+
+        def valid?: (update: update) -> bool
+        def fix_ordering: (update: update) -> update
+      end
+
+      class Part1
+        attr_reader update_manager: UpdateManager
+        attr_reader updates: Array[update]
+
+        def initialize: (file: String?) -> void
+
+        def answer: () -> Integer
+        def init_contents: (Array[String]) -> void
+        def valid_updates: () -> Array[update]
+        def middle_value: (update) -> Integer
+      end
+
+      class Part2 < Part1
+        def invalid_updates: () -> Array[update]
+      end
+    end
+  end
+end
