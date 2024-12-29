@@ -44,7 +44,7 @@ module AdventOfCode
         # @return [Array<Integer>] The updated fixed
         def fix_ordering(update:)
           sorted = []
-          update.each_with_index do |value, index|
+          update.each do |value|
             post_values = rules[value] || []
             pre_values = rules.keys.select { |key| rules[key].include?(value) }
 
