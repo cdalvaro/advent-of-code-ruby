@@ -66,6 +66,11 @@ Some tests are marked as slow, and they are skipped by default. To run them, you
       <td><a href="lib/puzzles/2024/day04"><code>lib/puzzles/2024/day04</code></a></td>
       <td>🌟🌟</td>
     </tr>
+    <tr>
+      <td>5️⃣ <a href="https://adventofcode.com/2024/day/5">Print Queue</a></td>
+      <td><a href="lib/puzzles/2024/day05"><code>lib/puzzles/2024/day05</code></a></td>
+      <td>🌟🌟</td>
+    </tr>
   </table>
 </details>
 
