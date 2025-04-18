@@ -5,7 +5,7 @@ require "cdalvaro/pair"
 
 module Cdalvaro
   module Test
-    class PairTest < ActiveSupport::TestCase
+    class PairTest < Minitest::Test
       def setup
         # Do nothing
       end
