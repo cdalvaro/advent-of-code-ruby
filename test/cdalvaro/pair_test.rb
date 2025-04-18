@@ -34,7 +34,7 @@ module Cdalvaro
       def test_to_s
         pair = Pair.new("Hello", :world)
 
-        assert_equal "[Hello, :world]", pair.to_s
+        assert_equal "[Hello, world]", pair.to_s
       end
     end
   end
