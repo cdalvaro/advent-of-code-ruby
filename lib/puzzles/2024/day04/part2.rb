@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require "cdalvaro/pair"
 require_relative "part1"
 
 module AdventOfCode
@@ -17,7 +18,7 @@ module AdventOfCode
 
         ##
         # Check if the pair is a MAS cross
-        # @param pair [Pair] The position of the A
+        # @param pair [Cdalvaro::Pair] The position of the A
         # @return [Boolean] True if the pair is a MAS cross, False otherwise
         def pair_is_mas_cross(pair)
           words = possible_movements(pair).map { |m| compose_word(m.first, m.second) }
@@ -28,8 +29,8 @@ module AdventOfCode
 
         ##
         # Return the movements of the diagonals for the given pair
-        # @param pair [Pair] The position of the A
-        # @return [Array<Pair>] The possible movements
+        # @param pair [Cdalvaro::Pair] The position of the A
+        # @return [Array<Cdalvaro::Pair>] The possible movements
         def possible_movements(pair)
           rows = (pair.first - 1..pair.first + 1).to_a
           cols = (pair.second - 1..pair.second + 1).to_a
@@ -38,16 +39,16 @@ module AdventOfCode
           return movements unless check_bounds(rows, cols)
 
           ## Top left to bottom right
-          movements << Pair.new(rows, cols)
+          movements << Cdalvaro::Pair.new(rows, cols)
 
           ## Bottom right to top left
-          movements << Pair.new(rows.reverse, cols.reverse)
+          movements << Cdalvaro::Pair.new(rows.reverse, cols.reverse)
 
           ## Top right to bottom left
-          movements << Pair.new(rows, cols.reverse)
+          movements << Cdalvaro::Pair.new(rows, cols.reverse)
 
           ## Bottom left to top right
-          movements << Pair.new(rows.reverse, cols)
+          movements << Cdalvaro::Pair.new(rows.reverse, cols)
 
           movements
         end

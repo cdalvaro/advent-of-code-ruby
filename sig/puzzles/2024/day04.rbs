@@ -1,16 +1,8 @@
 module AdventOfCode
   module Puzzles2024
     module Day04
-      class Pair[First, Second]
-        attr_reader first: First
-        attr_reader second: Second
-
-        def initialize: (First, Second) -> void
-        def to_s: () -> String
-      end
-
-      type indexes = Pair[Integer, Integer]
-      type movement = Pair[Array[Integer], Array[Integer]]
+      type indexes = Cdalvaro::Pair[Integer, Integer]
+      type movement = Cdalvaro::Pair[Array[Integer], Array[Integer]]
 
       class Part1
 

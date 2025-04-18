@@ -8,31 +8,6 @@ module AdventOfCode
     module Puzzles2024
       module Day04
         ##
-        # Tests Day 4 (2024) - Pair
-        class PairTest < Minitest::Test
-          def setup
-            # Do nothing
-          end
-
-          def teardown
-            # Do nothing
-          end
-
-          def test_accessors
-            pair = AdventOfCode::Puzzles2024::Day04::Pair.new(1, 2)
-
-            assert_equal 1, pair.first
-            assert_equal 2, pair.second
-          end
-
-          def test_to_s
-            pair = AdventOfCode::Puzzles2024::Day04::Pair.new(1, 2)
-
-            assert_equal "[1, 2]", pair.to_s
-          end
-        end
-
-        ##
         # Tests Day 4 (2024) - Part 1
         class Part1Test < Minitest::Test
           def setup

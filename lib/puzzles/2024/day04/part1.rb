@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "pair"
+require "cdalvaro/pair"
 
 module AdventOfCode
   module Puzzles2024
@@ -49,12 +49,12 @@ module AdventOfCode
 
         ##
         # Find all the indexes for the given pattern in the text
-        # @return [Array<Pair>] The indexes of the pattern in the text
+        # @return [Array<Cdalvaro::Pair>] The indexes of the pattern in the text
         def find_indexes_for(pattern:)
           indexes = []
           text.each_with_index do |line, row_idx|
             line.enum_for(:scan, pattern).map { Regexp.last_match&.begin(0) }.each do |col_idx|
-              indexes << Pair.new(row_idx, col_idx)
+              indexes << Cdalvaro::Pair.new(row_idx, col_idx)
             end
           end
           indexes
@@ -62,7 +62,7 @@ module AdventOfCode
 
         ##
         # Return the number of XMAS words for the given pair
-        # @param pair [Pair] The position of the X
+        # @param pair [Cdalvaro::Pair] The position of the X
         # @return [Integer] The number of XMAS words
         def number_of_xmas_words_for_pair(pair)
           possible_movements(pair).inject(0) do |acc, m|
@@ -72,8 +72,8 @@ module AdventOfCode
 
         ##
         # Return the possible movements for the given pair
-        # @param pair [Pair] The position of the X
-        # @return [Array<Pair>] The possible movements
+        # @param pair [Cdalvaro::Pair] The position of the X
+        # @return [Array<Cdalvaro::Pair>] The possible movements
         def possible_movements(pair)
           movements = []
           movements += horizontal_movements(pair)
@@ -104,78 +104,78 @@ module AdventOfCode
 
         ##
         # Return the possible horizontal movements for the given pair
-        # @param pair [Pair] The position of the X
-        # @return [Array<Pair>] The possible movements
+        # @param pair [Cdalvaro::Pair] The position of the X
+        # @return [Array<Cdalvaro::Pair>] The possible movements
         def horizontal_movements(pair)
           rows = Array.new(4, pair.first)
           movements = []
 
           ## Left to right
           cols = (pair.second..pair.second + 3).to_a
-          movements << Pair.new(rows, cols)
+          movements << Cdalvaro::Pair.new(rows, cols)
 
           ## Right to left
           cols = (pair.second - 3..pair.second).to_a.reverse
-          movements << Pair.new(rows, cols)
+          movements << Cdalvaro::Pair.new(rows, cols)
 
           movements
         end
 
         ##
         # Return the possible vertical movements for the given pair
-        # @param pair [Pair] The position of the X
-        # @return [Array<Pair] The possible movements
+        # @param pair [Cdalvaro::Pair] The position of the X
+        # @return [Array<Cdalvaro::Pair] The possible movements
         def vertical_movements(pair)
           cols = Array.new(4, pair.second)
           movements = []
 
           ## Top to bottom
           rows = (pair.first..pair.first + 3).to_a
-          movements << Pair.new(rows, cols)
+          movements << Cdalvaro::Pair.new(rows, cols)
 
           ## Bottom to top
           rows = (pair.first - 3..pair.first).to_a.reverse
-          movements << Pair.new(rows, cols)
+          movements << Cdalvaro::Pair.new(rows, cols)
 
           movements
         end
 
         ##
         # Return the possible diagonal (1) movements for the given pair
-        # @param pair [Pair] The position of the X
-        # @return [Array<Pair>] The possible movements
+        # @param pair [Cdalvaro::Pair] The position of the X
+        # @return [Array<Cdalvaro::Pair>] The possible movements
         def diagonal1_movements(pair)
           movements = []
 
           ## Top left to bottom right
           rows = (pair.first..pair.first + 3).to_a
           cols = (pair.second..pair.second + 3).to_a
-          movements << Pair.new(rows, cols)
+          movements << Cdalvaro::Pair.new(rows, cols)
 
           ## Bottom right to top left
           rows = (pair.first - 3..pair.first).to_a.reverse
           cols = (pair.second - 3..pair.second).to_a.reverse
-          movements << Pair.new(rows, cols)
+          movements << Cdalvaro::Pair.new(rows, cols)
 
           movements
         end
 
         ##
         # Return the possible diagonal (2) movements for the given pair
-        # @param pair [Pair] The position of the X
-        # @return [Array<Pair>] The possible movements
+        # @param pair [Cdalvaro::Pair] The position of the X
+        # @return [Array<Cdalvaro::Pair>] The possible movements
         def diagonal2_movements(pair)
           movements = []
 
           ## Top right to bottom left
           rows = (pair.first..pair.first + 3).to_a
           cols = (pair.second - 3..pair.second).to_a.reverse
-          movements << Pair.new(rows, cols)
+          movements << Cdalvaro::Pair.new(rows, cols)
 
           ## Bottom left to top right
           rows = (pair.first - 3..pair.first).to_a.reverse
           cols = (pair.second..pair.second + 3).to_a
-          movements << Pair.new(rows, cols)
+          movements << Cdalvaro::Pair.new(rows, cols)
 
           movements
         end
