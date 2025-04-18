@@ -1,0 +1,9 @@
+module Cdalvaro
+  module Test
+    class PairTest < MiniTest::Test
+      def test_readers: -> untyped
+      def test_writers: -> untyped
+      def test_to_s: -> untyped
+    end
+  end
+end
