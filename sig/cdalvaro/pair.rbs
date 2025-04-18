@@ -1,0 +1,9 @@
+module Cdalvaro
+  class Pair[First, Second]
+    attr_accessor first: First
+    attr_accessor second: Second
+
+    def initialize: (First, Second) -> void
+    def to_s: () -> String
+  end
+end
