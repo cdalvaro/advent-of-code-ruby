@@ -8,7 +8,7 @@ group :development do
   # bootstrapping
   gem "minitest", "~> 5.25"
   gem "minitest-ci"
-  gem "rake", "~> 13.0"
+  gem "rake", "~> 13.3"
 
   # rubocop
   gem "rubocop"
