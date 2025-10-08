@@ -6,7 +6,7 @@ ruby file: ".ruby-version"
 
 group :development do
   # bootstrapping
-  gem "minitest", "~> 5.25"
+  gem "minitest", "~> 5.26"
   gem "minitest-ci"
   gem "rake", "~> 13.3"
 
