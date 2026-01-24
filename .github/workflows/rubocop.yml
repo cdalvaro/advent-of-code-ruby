@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     name: Checks
     steps:
       - name: Checkout repository
