@@ -18,7 +18,7 @@ group :development do
   gem "rubocop-shopify"
 
   # Type Signature for Ruby
-  gem "rbs", "~> 4.1"
+  gem "rbs", "~> 4.2"
 
   # Steep
   gem "steep"
