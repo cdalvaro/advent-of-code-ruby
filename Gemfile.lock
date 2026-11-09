@@ -25,7 +25,7 @@ GEM
       prism (~> 1.5)
     minitest-ci (3.4.0)
       minitest (>= 5.0.6)
-    overcommit (0.74.0)
+    overcommit (0.75.0)
       childprocess (>= 5.0.0, < 6)
       iniparse (~> 1.4)
       rexml (>= 3.4.2)
